@@ -18,4 +18,16 @@
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
   </body>
+
+  <script>
+    window.addEventListener("scroll", function() {
+      var target = document.getElementById("header");
+      var element = document.getElementById("back-to-the-top"); 
+      if (window.scrollY > (target.offsetTop + target.offsetHeight)) {
+        element.classList.remove('hidden');
+      } else {
+        element.classList.add('hidden');
+      }
+    });
+  </script>
 </html>

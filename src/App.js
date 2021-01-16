@@ -6,16 +6,8 @@ const tag_color = {
   Misc: '#67a286',
 }
 
-function handleScroll() {
-  let target = document.getElementById("about");
-  if (window.scrollY > (target.offsetTop + target.offsetHeight)) {
-    alert("You've scrolled past the second div");
-  }
-}
-
 function BackToTheTop() {
-  let hidden = false;
-  return <li onScroll={handleScroll} className='back-to-the-top' hidden={hidden}><a href='#header' /></li>
+  return <li className='back-to-the-top hidden' id='back-to-the-top'><a href='#header' /></li>
 }
 
 function NavBar({ items }) {
@@ -74,8 +66,9 @@ function Header() {
           <h1>Inês</h1><h1> Almeida</h1>
           <br />
           <h2>Software Engineer</h2><h2> | </h2><h2>Biomedical Engineer MSc</h2>
-          <div className="social">
+          <div className="social tooltip">
             {social_media.map(s => <SocialMedia key={s.keywork} {...s} />)}
+            <span class="tooltiptext">Email: contact@ines-almeida.com</span>
           </div>
         </div>
       </div>

@@ -1,0 +1,10 @@
+@keyframes backToTopAfter {
+    0% { transform: rotate(45deg) translateX(8px); }
+   50% { transform: rotate(45deg) translateX(3px) translateY(-5px); }
+   100% { transform: rotate(45deg) translateX(8px); }
+}
+@keyframes backToTopBefore {
+    0% { transform: rotate(135deg) translateX(11px); }
+   50% { transform: rotate(135deg) translateX(6px) translateY(5px); }
+   100% { transform: rotate(135deg) translateX(11px); }
+}
