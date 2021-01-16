@@ -1,0 +1,101 @@
+.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 1rem;
+    display: flex;
+    position: fixed;
+    right: 0;
+    flex-direction: row-reverse;
+    z-index: 999;
+
+    &__item {
+        color: white;
+        padding: 1rem 2rem;
+        font-size: 2rem;
+        font-weight: 600;
+        text-transform: uppercase;
+
+        &:hover::after {
+            width: 100%;
+            background-color: white;
+        }
+
+        &::after {
+            content: '';
+            margin-top: 0.2rem;
+            display: block;
+            width: 0;
+            height: 0.1em;
+            transition: all 0.5s ease-in-out;
+            background-color: rgba(white, 0);
+        }
+
+        & a {
+            color: inherit;
+            text-decoration: none;
+        }
+    }
+
+    .back-to-the-top a {
+
+        height: 2em;
+        width: 2.5em;
+        display: block;
+        color: white;
+        margin-top: 1.5rem;
+
+        &::after,
+        &::before {
+            content: '';
+            width: 20px;
+            height: 2px;
+            display: block;
+            background-color: white;
+            transform: rotate(45deg) translateX(8px);
+            border-radius: 1px;
+            position: relative;
+            transition: all 1s var(--benzier-curve);
+        }
+        &::before {
+            transform: rotate(135deg) translateX(11px);
+        }
+
+        &:hover::after {
+            transform: rotate(-45deg) translateX(-8px) translateY(-3px);
+        }
+        &:hover::before {
+            transform: rotate(45deg) translateX(8px);
+        }
+    }
+}
+
+
+@media only screen and (max-width: $bp-small) {
+    .navbar {
+        &__item {
+            font-size: 1.5rem;
+        }
+
+        .back-to-the-top {
+            margin-top: 0;
+            &::after,
+            &::before {
+                width: 10px;
+                height: 2px;
+                transform: rotate(45deg) translateX(11px) translateY(3px);
+            }
+            &::before {
+                transform: rotate(-45deg) translateX(-11.5px) translateY(5px);
+            }
+        }
+    }
+}  
+
+@media only screen and (max-width: $bp-smallest) {
+    .navbar {
+        padding: 0.5rem;
+        &__item {
+            padding: 0.8rem 1.6rem;
+        }
+    }
+}  

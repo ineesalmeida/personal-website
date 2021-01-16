@@ -1,0 +1,52 @@
+.container {
+    position: relative;
+    min-height: 100vh;
+    color: white;
+    margin: auto;
+    max-width: 120rem;
+    padding: 10rem;
+    display: flex;
+    align-items: center;
+
+    &__content {
+        color: inherit;
+    }
+}
+
+.vignete-top,
+.vignete-bottom {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 8rem;
+    z-index: 998;
+    background: var(--background-color);
+    background: linear-gradient(0deg, rgba(black,0) 0%, var(--background-color) 60%, var(--background-color) 100%);
+}
+.vignete-bottom {
+    position: fixed;
+    top: auto;
+    bottom: 0;
+    height: 3rem;
+    background: linear-gradient(180deg, rgba(black,0) 0%, var(--background-color) 95%, var(--background-color) 100%);
+}
+
+@media only screen and (max-width: $bp-medium) {
+
+    .vignete-top{
+        height: 12rem;
+        background: linear-gradient(0deg, rgba(black,0) 0%, var(--background-color) 50%, var(--background-color) 100%);
+    }
+}  
+
+@media only screen and (max-width: $bp-small) {
+    .container {
+        padding: 5rem;
+        padding-top: 8rem;
+    }
+
+    .vignete-top{
+        height: 10rem;
+        background: linear-gradient(0deg, rgba(black,0) 0%, var(--background-color) 50%, var(--background-color) 100%);
+    }
+}  

@@ -1,0 +1,38 @@
+.about-me {
+    color: inherit;
+    font-size: 1.6rem;
+    
+    & p {
+        margin-bottom: 3rem;
+        text-align: justify;
+    }
+
+    &__img {
+        top: 0;
+        right: 0;
+        shape-outside: ellipse(23rem 22rem at 50% 50%);
+        margin-left: 3rem;
+        width: 40rem;
+        height: 50rem;
+        float: right;
+        opacity: 0.8;
+
+        & img {
+            float: right;
+            height: 98%;
+        }
+    }
+}
+
+@media only screen and (max-width: $bp-medium) {
+    .about-me {
+        &__img {
+            margin-top: 10rem;
+            shape-outside: none;
+            position: absolute;
+            height: 100vh;
+            opacity: 0.3;
+            z-index: -1;
+        }
+    }
+}  

@@ -8,7 +8,7 @@
     "@testing-library/user-event": "^12.6.0",
     "autoprefixer": "^10.2.1",
     "concat": "^1.0.3",
-    "node-sass": "^5.0.0",
+    "node-sass": "^4.14.1",
     "npm-run-all": "^4.1.5",
     "postcss-cli": "^8.3.1",
     "react": "^17.0.1",
@@ -17,16 +17,10 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "watch:sass": "node-sass src/sass/main.scss src/css/style.css -w",
     "start": "react-scripts start",
-    "dev": "npm-run-all --parallel start watch:sass",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "s": "react-scripts eject",
-    "compile:sass": "node-sass src/sass/main.scss src/css/style.comp.css",
-    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' src/css/style.comp.css -o src/css/style.prefix.css",
-    "compress:css": "node-sass src/css/style.prefix.css src/css/style.css --output-style compressed",
-    "build:css": "npm-run-all compile:sass prefix:css compress:css"
+    "stop": "react-scripts eject"
   },
   "keywords": [
     "personal website"
