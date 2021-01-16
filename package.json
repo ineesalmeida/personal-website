@@ -1,6 +1,7 @@
 {
   "name": "personal-website",
   "version": "0.1.0",
+  "homepage": ".",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.9",
@@ -20,7 +21,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "stop": "react-scripts eject"
+    "eject": "react-scripts eject"
   },
   "keywords": [
     "personal website"
