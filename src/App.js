@@ -57,6 +57,11 @@ function Header() {
       icon: 'fab fa-instagram',
       link: 'https://www.instagram.com/inees_almeida/',
     },
+    {
+      keywork: 'CV',
+      icon: 'fas fa-file-alt',
+      link: './cv/index.html',
+    },
   ]
 
   return (
