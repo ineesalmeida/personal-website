@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Inês Almeida - CV</title>
-    <link>ines-almeida.com/cv/</link>
+    <link>https://ines-almeida.com/cv/</link>
     <description>Recent content on Inês Almeida - CV</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="ines-almeida.com/cv/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://ines-almeida.com/cv/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>
