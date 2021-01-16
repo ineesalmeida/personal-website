@@ -2,9 +2,10 @@
     color: inherit;
     font-size: 1.6rem;
     
-    & p {
+    & p, a {
         margin-bottom: 3rem;
         text-align: justify;
+        color: inherit;
     }
 
     &__img {
@@ -33,6 +34,17 @@
             height: 100vh;
             opacity: 0.3;
             z-index: -1;
+        }
+    }
+}  
+
+@media only screen and (max-width: $bp-small) {
+    .about-me {
+        &__img {
+            & img {
+                height: auto;
+                width: 80%;
+            }
         }
     }
 }  
