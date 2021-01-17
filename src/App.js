@@ -201,6 +201,14 @@ function Projects() {
       link: null,
       content: "Small weekend project. I like to take these chances to explore new tools and practice. I used sass, flexbox, CSS animations and React (not that it needed it, but it's more fun to use it!)",
     },
+    {
+      title: "Virtual Library",
+      slug: 'flask-lib',
+      date: "2019",
+      keyword: "Code",
+      link: null,
+      content: "My mum was getting lost in all her thousands of books, and wanted to go through each and note down where it was. For her birthday, I created a DB with a nice front-end made in Flask and Material where she could, add, edit, query or remove book registries, and import and export them as CSVs to open in Excel.",
+    },
   ]
 
   let project_cards = projects.sort((a, b) => (a.date > b.date) ? -1 : 1).map((props) => <ProjectCard key={props.slug} {...props} />);
