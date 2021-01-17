@@ -71,6 +71,7 @@ function Header() {
           <h1>Inês</h1><h1> Almeida</h1>
           <br />
           <h2>Software Engineer</h2><h2> | </h2><h2>Biomedical Engineer MSc</h2>
+          <br />
           <div className="social tooltip">
             {social_media.map(s => <SocialMedia key={s.keywork} {...s} />)}
             <span class="tooltiptext">Email: contact@ines-almeida.com</span>

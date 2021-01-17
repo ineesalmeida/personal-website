@@ -20,6 +20,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "build-cv": "( cd ../cv-almeida-example && hugo )",
+    "build-with-cv": "npm-run-all build build-cv",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
