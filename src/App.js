@@ -97,8 +97,7 @@ function About() {
             Hi,
           </p>
           <p>
-            Welcome!
-            I am Inês: I like <b>bouldering</b>, <b>programming</b>, <b>cooking</b>, <b>kitesurfing</b> and doing all sorts of small artsy things.
+            I am Inês: I like <b>bouldering</b>, <b>programming</b>, <b>cooking</b>, <b>kitesurfing</b> and <b>graphic design</b>.
           </p>
           <p>
             I'm also a <b>Software Engineer</b> with a Master's in <b>Biomedical Engineering</b>. I get quite excited about building pretty front-ends with <b>Sass</b>, <b>Javascript</b> and <b>React</b>, but I also do back-end programming (mostly <b>Django</b>).
