@@ -1,24 +1,42 @@
 .header {
-    & h1 {
-        font-size: 10rem;
-        line-height: 1.1em;
-        margin-bottom: 0.4em;
-        display: inline;
-        transition: color 0.5s;
 
-        &:hover {
-            color: var(--color-secondary-light);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    &__text {
+        flex-shrink: 1;
+        margin-left: 3rem;
+
+        & h1 {
+            font-size: 8rem;
+            line-height: 1.1em;
+            margin-bottom: 0.4em;
+            display: inline;
+            transition: color 0.5s;
+    
+            &:hover {
+                color: var(--color-secondary-light);
+            }
+        }
+        & h2 {
+            font-size: 2.5rem;
+            line-height: 1.1em;
+            display: inline;
+            transition: color 0.5s;
+    
+            &:hover {
+                color: var(--color-primary-light);
+            }
         }
     }
-    & h2 {
-        font-size: 4rem;
-        line-height: 1.1em;
-        display: inline;
-        transition: color 0.5s;
 
-        &:hover {
-            color: var(--color-primary-light);
-        }
+    &__picture {
+        margin: 1rem;
+        flex-shrink: 2;
+        max-width: 25rem;
+        border-radius: 99999px;
     }
 }
 
@@ -52,8 +70,16 @@
 
 @media only screen and (max-width: $bp-medium) {
     .header {
+        flex-direction: column;
+
+        &__text {
+            text-align: center;
+            margin-left: 0;
+            margin-top: 3rem;
+        }
+
         & h1 {
-            font-size: 8rem;
+            font-size: 6rem;
         }
         & h2 {
             font-size: 3.5rem;

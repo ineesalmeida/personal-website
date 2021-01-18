@@ -68,13 +68,16 @@ function Header() {
     <div className='container' id='header'>
       <div className='container__content'>
         <div className='header'>
-          <h1>Inês</h1><h1> Almeida</h1>
-          <br />
-          <h2>Software Engineer</h2><h2> | </h2><h2>Biomedical Engineer MSc</h2>
-          <br />
-          <div className="social tooltip">
-            {social_media.map(s => <SocialMedia key={s.keywork} {...s} />)}
-            <span class="tooltiptext">Email: contact@ines-almeida.com</span>
+          <img src={process.env.PUBLIC_URL + '/me.jpg'} className="header__picture" />
+          <div className="header__text">
+            <h1>Inês</h1><h1> Almeida</h1>
+            <br />
+            <h2>Software Engineer</h2><h2> | </h2><h2>Biomedical Engineer MSc</h2>
+            <br />
+            <div className="social tooltip">
+              {social_media.map(s => <SocialMedia key={s.keywork} {...s} />)}
+              <span class="tooltiptext">Email: contact@ines-almeida.com</span>
+            </div>
           </div>
         </div>
       </div>
@@ -199,7 +202,7 @@ function Projects() {
       date: "2021",
       keyword: "Code",
       link: null,
-      content: "Small weekend project. I like to take these chances to explore new tools and practice. I used sass, flexbox, CSS animations and React (not that it needed it, but it's more fun to use it!)",
+      content: "Small weekend project that has still a bunch of features to add. I like to take these chances to explore new tools and practice. I used sass, flexbox, CSS animations and React"
     },
     {
       title: "Virtual Library",
