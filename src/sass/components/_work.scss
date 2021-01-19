@@ -2,8 +2,13 @@
     color: inherit;
     display: flex;
     flex-wrap: wrap;
-    justify-content: stretch;
-    align-items: stretch;
+    position: relative;
+
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: 2rem;
+    }
 
     &__item {
         padding: 2rem 3rem;
@@ -13,6 +18,16 @@
         min-width: 40rem;
         position: relative;
         flex-grow: 1;
+        transition: all 0.5s ease-in-out;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 0.6rem;
+            transition: inherit;
+        }
 
         &__date {
             font-style: italic;
@@ -26,44 +41,51 @@
             margin: 1rem;
             shape-outside: margin-box;
         }
+
+        &:hover {
+            // background-color: rgba(white, 0.3);
+            &::before {
+                width: 25%;
+                background-color: var(--color-secondary-light);
+            }
+        }
     }
 
     &__timeline {
-        height: 0.6rem;
-        width: 100%;
+        width: 0.6rem;
+        height: 100%;
         background-color: rgba(white, 0.1);
-        margin-bottom: 0.4rem;
-        position: relative;
+        position: absolute;
 
         &__bar {
             position: absolute;
-            left: 0;
-            height: 0.6rem;
+            width: 0.6rem;
+            float: top;
             background-color: var(--color-secondary-light);
             transition: all 1s ease-out;
-            border-left: 0.2rem solid var(--background-color);
-            border-right: 0.2rem solid var(--background-color);
+            border-top: 0.2rem solid var(--background-color);
+            border-bottom: 0.2rem solid var(--background-color);
         }
 
         &__now {
             position: absolute;
-            right: 0;
-            bottom: 1rem;
+            top: 0;
+            right: 1.5rem;
         }
 
         &__start {
             position: absolute;
-            left: 0;
-            bottom: 1rem;
+            bottom: 0;
+            right: 1.5rem;
         }
 
         &__subbar {
             position: absolute;
-            left: 0;
-            height: 0.6rem;
+            float: top;
+            width: 0.6rem;
             background-color: white;
-            border-left: 0.2rem solid var(--background-color);
-            border-right: 0.2rem solid var(--background-color);
+            border-top: 0.2rem solid var(--background-color);
+            border-bottom: 0.2rem solid var(--background-color);
         }
     }
 }
@@ -71,11 +93,15 @@
 
 @media only screen and (max-width: $bp-small) {
     .work {
+        &__items {
+            margin-left: 1rem;
+        }
+
         &__item {
             min-width: 30rem;
         }
-        &__timeline {
-            display: none;
-        }
+        // &__timeline {
+        //     display: none;
+        // }
     }
 }  

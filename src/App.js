@@ -24,7 +24,7 @@ function NavBar({ items }) {
 function SocialMedia({ keywork, icon, link }) {
   return (
     <div className="social__icon">
-      <a href={link} target="_blank" rel="noopener me">
+      <a href={link} target="_blank" rel="noreferrer">
         <i className={icon} title={keywork} aria-label={"Go to " + keywork} />
       </a>
     </div>
@@ -108,7 +108,7 @@ function About() {
             I've lived in 6 different countries in Europe; I've published two neuroscience papers; I was president of a non-profit organisation for 2 years while in university; I built a video game to teach kids about a specific science topic.
           </p>
           <p>
-            My most recent project is building a <b>VR video-game in Unity (C#)</b> with my <a target="_blank" href="https://www.diogo-cunha.com/">best-friend and partner</a> in my free time, which has been a lot of fun.
+            My most recent project is building a <b>VR video-game in Unity (C#)</b> with my <a target="_blank" rel="noreferrer" href="https://www.diogo-cunha.com/">best-friend and partner</a> in my free time, which has been a lot of fun.
           </p>
           <p>
             Anyway: welcome to my personal website.
@@ -124,7 +124,7 @@ function ProjectCard({ title, content, slug, link, keyword, date }) {
   let _link = link ? <div className="projects__card__label projects__card__link">Link</div> : null;
 
   return (
-    <a href={link} target="_blank" className='projects__card' key={slug} >
+    <a href={link} target="_blank" rel="noreferrer" className='projects__card' key={slug} >
       <div className="projects__card__keywords">
         {_link}
         <div className="projects__card__label" style={{ backgroundColor: tag_color[keyword] }}>{keyword}</div>
@@ -231,10 +231,10 @@ function Projects() {
   )
 }
 
-function TimelineBar({ first_year, job_bars, bar_width, bar_start }) {
+function TimelineBar({ first_year, job_bars, bar_height, bar_start }) {
 
   let sub_bars = job_bars.map((bar) => {
-    return <div className="work__timeline__subbar" style={{ width: bar[0] + "%", marginLeft: bar[1] + "%" }} />
+    return <div className="work__timeline__subbar" style={{ height: bar[0] + "%", bottom: bar[1] + "%" }} />
   });
 
   return (
@@ -242,7 +242,7 @@ function TimelineBar({ first_year, job_bars, bar_width, bar_start }) {
       <p className="work__timeline__now">Now</p>
       <p className="work__timeline__start">{first_year}</p>
       {sub_bars}
-      <div className="work__timeline__bar" style={{ width: bar_width + "%", marginLeft: bar_start + "%" }} />
+      <div className="work__timeline__bar" style={{ height: bar_height + "%", bottom: bar_start + "%" }} />
     </div>
   )
 }
@@ -307,16 +307,24 @@ function Work() {
     }
   ];
 
-  const [barWidth, setBarWidth] = useState(0);
+  const [target, setTarget] = useState('asd');
+  const [barHeight, setbarHeight] = useState(0);
   const [barStart, setBarStart] = useState(0);
 
-  function changeBarWidth(event) {
+  // Dummy to force state update when mouse moves
+  // Quick hacky sollution for the issue where 'onMouseEnter'
+  // is not called on scroll or if the mouse moves too fast in a slow DOM
+  function handleMouseOver(event) {
+    setTarget(event.target.getAttribute('data-key'));
+  }
+
+  function changebarHeight(event) {
     setBarStart(event.target.getAttribute('data-barstart'));
-    setBarWidth(event.target.getAttribute('data-barwidth'));
+    setbarHeight(event.target.getAttribute('data-barheight'));
   }
 
   let first_date = moment();
-  jobs.map(job => {
+  jobs.forEach(job => {
     let _to_moment = job.to ? moment(job.to, "MM-YYYY") : moment();
     let _from_moment = moment(job.from, "MM-YYYY");
     let _duration = _to_moment.diff(_from_moment, 'months');
@@ -332,33 +340,36 @@ function Work() {
     }
   })
   let time_span = moment().diff(first_date, "months");
-  jobs.map(job => {
+  jobs.forEach(job => {
     job['bar_start'] = 100 * job._from.diff(first_date, "months") / time_span;
-    job['bar_width'] = 100 * job.duration / time_span;
+    job['bar_height'] = 100 * job.duration / time_span;
   })
 
-  let job_bars = jobs.map(job => [job.bar_width, job.bar_start]);
+  let job_bars = jobs.map(job => [job.bar_height, job.bar_start]);
 
   return (
     <div className='container' id='work'>
       <div className='container__content'>
         <h1>My career so far</h1>
         <div className='work'>
-          <TimelineBar first_year={first_date.format('YYYY')} job_bars={job_bars} bar_width={barWidth} bar_start={barStart} />
-
-          {jobs.map((job) => {
-            return (
-              <div className="work__item" key={job.slug} onMouseEnter={changeBarWidth} data-barstart={job.bar_start} data-barwidth={job.bar_width}>
-                <p className="work__item__place"><i class="fa fa-map-marker-alt" aria-hidden="true" />  {job.place}</p>
-                <h2>{job.title}</h2>
-                <h3>{job.company}</h3>
-                <p className="work__item__date">{job.date}</p>
-                <p>{job.description}</p>
-              </div>
-            )
-          })}
+          <TimelineBar first_year={first_date.format('YYYY')} job_bars={job_bars} bar_height={barHeight} bar_start={barStart} />
+          <div className="work__items" >
+            {jobs.map((job) => {
+              return (
+                <div className="work__item" key={job.slug} data-key={job.slug} onMouseEnter={changebarHeight.bind(this)} onMouseOver={handleMouseOver.bind(this)}
+                  onClick={changebarHeight.bind(this)} data-barstart={job.bar_start} data-barheight={job.bar_height}>
+                  <p className="work__item__place"><i className="fa fa-map-marker-alt" aria-hidden="true" />  {job.place}</p>
+                  <h2>{job.title}</h2>
+                  <h3>{job.company}</h3>
+                  <p className="work__item__date">{job.date}</p>
+                  <p>{job.description}</p>
+                </div>
+              )
+            })}
+          </div>
         </div>
       </div>
+      <p hidden>{target}</p>
     </div>
   )
 }
