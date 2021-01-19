@@ -307,20 +307,13 @@ function Work() {
     }
   ];
 
-  const [target, setTarget] = useState('asd');
   const [barHeight, setbarHeight] = useState(0);
   const [barStart, setBarStart] = useState(0);
 
-  // Dummy to force state update when mouse moves
-  // Quick hacky sollution for the issue where 'onMouseEnter'
-  // is not called on scroll or if the mouse moves too fast in a slow DOM
-  function handleMouseOver(event) {
-    setTarget(event.target.getAttribute('data-key'));
-  }
-
   function changebarHeight(event) {
-    setBarStart(event.target.getAttribute('data-barstart'));
-    setbarHeight(event.target.getAttribute('data-barheight'));
+    setBarStart(event.target.getAttribute('data-barstart') || event.target.parentElement.getAttribute('data-barstart'));
+
+    setbarHeight(event.target.getAttribute('data-barheight') || event.target.parentElement.getAttribute('data-barheight'));
   }
 
   let first_date = moment();
@@ -356,7 +349,7 @@ function Work() {
           <div className="work__items" >
             {jobs.map((job) => {
               return (
-                <div className="work__item" key={job.slug} data-key={job.slug} onMouseEnter={changebarHeight.bind(this)} onMouseOver={handleMouseOver.bind(this)}
+                <div className="work__item" key={job.slug} data-key={job.slug} onMouseEnter={changebarHeight.bind(this)} onTouchStart={changebarHeight.bind(this)}
                   onClick={changebarHeight.bind(this)} data-barstart={job.bar_start} data-barheight={job.bar_height}>
                   <p className="work__item__place"><i className="fa fa-map-marker-alt" aria-hidden="true" />  {job.place}</p>
                   <h2>{job.title}</h2>
@@ -369,7 +362,6 @@ function Work() {
           </div>
         </div>
       </div>
-      <p hidden>{target}</p>
     </div>
   )
 }
