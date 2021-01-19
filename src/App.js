@@ -99,13 +99,13 @@ function About() {
             Hi,
           </p>
           <p>
-            I am Inês: I like <b>bouldering</b>, <b>programming</b>, <b>cooking</b>, and <b>graphic design</b> among other things. I'm also a <b>Software Engineer</b> with a Master's in <b>Biomedical Engineering and Biophysics</b>. I currently work as full-stack developer, which I quite enjoy.
+            I am Inês: I like <b>bouldering</b>, <b>programming</b>, <b>cooking</b>, and <b>graphic design</b> among other things. I'm also a <b>Software Engineer</b> with a Master's in <b>Biomedical Engineering and Biophysics</b>. I currently work as a full-stack developer, which I quite enjoy.
           </p>
           <p>
-            I've lived in 6 different countries in Europe; I've published two neuroscience papers; I was president of a non-profit organisation for 2 years while in university; I built a video game to teach kids about a specific science topic.
+            I've lived in 6 different countries in Europe; I've published two neuroscience papers; I was president of a non-profit organization for 2 years while in university; I built a video game to teach kids about a specific science topic.
           </p>
           <p>
-            My most recent project is building a <b>VR video-game in Unity (C#)</b> with my <a target="_blank" rel="noreferrer" href="https://www.diogo-cunha.com/">best-friend and partner</a> in my free time, which has been a lot of fun.
+            My most recent project is building a <b>VR video-game in Unity (C#)</b> with my <a target="_blank" rel="noreferrer" href="https://www.diogo-cunha.com/">best friend and partner</a> in my free time, which has been a lot of fun.
           </p>
           <p>
             Anyway: welcome to my personal website.
