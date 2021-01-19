@@ -32,7 +32,7 @@
         height: 0.6rem;
         width: 100%;
         background-color: rgba(white, 0.1);
-        margin: 0.2rem;
+        margin-bottom: 0.4rem;
         position: relative;
 
         &__bar {
@@ -41,17 +41,19 @@
             height: 0.6rem;
             background-color: var(--color-secondary-light);
             transition: all 1s ease-out;
+            border-left: 0.2rem solid var(--background-color);
+            border-right: 0.2rem solid var(--background-color);
         }
 
         &__now {
             position: absolute;
-            left: 0;
+            right: 0;
             bottom: 1rem;
         }
 
         &__start {
             position: absolute;
-            right: 0;
+            left: 0;
             bottom: 1rem;
         }
 

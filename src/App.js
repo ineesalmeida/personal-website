@@ -99,13 +99,13 @@ function About() {
             Hi,
           </p>
           <p>
-            I am Inês: I like <b>bouldering</b>, <b>programming</b>, <b>cooking</b>, <b>graphic design</b> and <b>kitesurfing</b>.
+            I am Inês: I like <b>bouldering</b>, <b>programming</b>, <b>cooking</b>, <b>graphic design</b>, among other things.
           </p>
           <p>
             I'm also a <b>Software Engineer</b> with a Master's in <b>Biomedical Engineering</b>. I currently work as full-stack developer, which I quite enjoy.
           </p>
           <p>
-            I've lived in 6 different countries in Europe; I've published two neuroscience papers; I was president of a non-profit organisation for 2 years while in university; you can hear my voice in 3 released music albums; I built a video game to teach kids about a specific science topic.
+            I've lived in 6 different countries in Europe; I've published two neuroscience papers; I was president of a non-profit organisation for 2 years while in university; I built a video game to teach kids about a specific science topic.
           </p>
           <p>
             My most recent project is building a <b>VR video-game in Unity (C#)</b> with my <a target="_blank" href="https://www.diogo-cunha.com/">best-friend and partner</a> in my free time, which has been a lot of fun.
@@ -279,10 +279,10 @@ function Work() {
       'slug': 'igc-flow'
     },
     {
-      'title': "Finished Master's in Biomedical Engineering",
+      'title': "Master's in Biomedical Engineering",
       'company': 'Faculdade de Ciências da Universidade de Lisboa',
       'place': 'Lisbon, PT',
-      'from': "11-2017",
+      'from': "09-2015",
       'to': "11-2017",
       'description': "",
       'slug': 'masters'
@@ -295,15 +295,6 @@ function Work() {
       'to': "06-2017",
       'description': "Designed and developed an experimental paradigm, and acquired and analysed data from brain signals while people moved their arm in a controlled environment. The results were then published in my Master's thesis and later worked into a paper released in 2020.",
       'slug': 'master-intern'
-    },
-    {
-      'title': "Finished Bachelor's in Biomedical Engineering",
-      'company': 'Faculdade de Ciências da Universidade de Lisboa',
-      'place': 'Lisbon, PT',
-      'from': "09-2015",
-      'to': "09-2015",
-      'description': "",
-      'slug': 'bachelors'
     },
     {
       'title': 'Research Intern',
