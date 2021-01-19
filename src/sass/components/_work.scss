@@ -1,0 +1,67 @@
+.work {
+    color: inherit;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: stretch;
+    align-items: stretch;
+
+    &__item {
+        padding: 2rem 3rem;
+        margin: 0.2rem;
+        background-color: rgba(white, 0.2);
+        flex: 1;
+        min-width: 40rem;
+        position: relative;
+        flex-grow: 1;
+
+        &__date {
+            font-style: italic;
+            line-height: 3em;
+        }
+
+        &__place {
+            top: 0;
+            right: 0;
+            float: right;
+            margin: 1rem;
+            shape-outside: margin-box;
+        }
+    }
+
+    &__timeline {
+        height: 0.6rem;
+        width: 100%;
+        background-color: rgba(white, 0.1);
+        margin: 0.2rem;
+        position: relative;
+
+        &__bar {
+            position: absolute;
+            left: 0;
+            height: 0.6rem;
+            background-color: var(--color-secondary-light);
+            transition: all 1s ease-out;
+        }
+
+        &__now {
+            position: absolute;
+            left: 0;
+            bottom: 1rem;
+        }
+
+        &__start {
+            position: absolute;
+            right: 0;
+            bottom: 1rem;
+        }
+
+        &__subbar {
+            position: absolute;
+            left: 0;
+            height: 0.6rem;
+            background-color: white;
+            border-left: 0.2rem solid var(--background-color);
+            border-right: 0.2rem solid var(--background-color);
+        }
+    }
+}

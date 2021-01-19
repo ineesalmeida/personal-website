@@ -1,4 +1,6 @@
 import './sass/main.scss';
+import moment from 'moment';
+import React, { useState } from "react";
 
 const tag_color = {
   Code: '#386FA4',
@@ -76,7 +78,7 @@ function Header() {
             <br />
             <div className="social tooltip">
               {social_media.map(s => <SocialMedia key={s.keywork} {...s} />)}
-              <span class="tooltiptext">Email: contact@ines-almeida.com</span>
+              <span className="tooltiptext">Email: contact@ines-almeida.com</span>
             </div>
           </div>
         </div>
@@ -97,19 +99,19 @@ function About() {
             Hi,
           </p>
           <p>
-            I am Inês: I like <b>bouldering</b>, <b>programming</b>, <b>cooking</b>, <b>kitesurfing</b> and <b>graphic design</b>.
+            I am Inês: I like <b>bouldering</b>, <b>programming</b>, <b>cooking</b>, <b>graphic design</b> and <b>kitesurfing</b>.
           </p>
           <p>
-            I'm also a <b>Software Engineer</b> with a Master's in <b>Biomedical Engineering</b>. I get quite excited about building pretty front-ends with <b>Sass</b>, <b>Javascript</b> and <b>React</b>, but I also do back-end programming (mostly <b>Django</b>).
+            I'm also a <b>Software Engineer</b> with a Master's in <b>Biomedical Engineering</b>. I currently work as full-stack developer, which I quite enjoy.
           </p>
           <p>
-            I've lived in 6 different countries in Europe; I've published two neuroscience papers; I was president of a non-profit organisation for 2 years while in uni; you can hear my voice in 3 music albums; I built a video game to teach kids about science; and I've dived in the baltic ocean in the winter.
+            I've lived in 6 different countries in Europe; I've published two neuroscience papers; I was president of a non-profit organisation for 2 years while in university; you can hear my voice in 3 released music albums; I built a video game to teach kids about a specific science topic.
           </p>
           <p>
-            My most recent project is building a <b>VR video-game in Unity (C#)</b> with my <a target="_blank" href="https://www.diogo-cunha.com/">best-friend and partner</a> in my free time, which has been a lot of fun!
+            My most recent project is building a <b>VR video-game in Unity (C#)</b> with my <a target="_blank" href="https://www.diogo-cunha.com/">best-friend and partner</a> in my free time, which has been a lot of fun.
           </p>
           <p>
-            Either way, welcome to my personal website.
+            Anyway: welcome to my personal website.
           </p>
         </div>
       </div>
@@ -201,7 +203,7 @@ function Projects() {
       date: "2021",
       keyword: "Code",
       link: null,
-      content: "Small weekend project that has still a bunch of features to add. I like to take these chances to explore new tools and practice. I used sass, flexbox, CSS animations and React"
+      content: "Small weekend project that has still a bunch of features to add. I like to take these chances to explore new tools and practice. I used sass, flexbox, CSS animations and React."
     },
     {
       title: "Virtual Library",
@@ -218,7 +220,7 @@ function Projects() {
   return (
     <div className='container' id='projects'>
       <div className='container__content'>
-        <h1>My Projects</h1>
+        <h1>Some of my Projects</h1>
         <div className='projects'>
           <div className='projects__cards_container'>
             {project_cards}
@@ -229,14 +231,141 @@ function Projects() {
   )
 }
 
+function TimelineBar({ first_year, job_bars, bar_width, bar_start }) {
+
+  let sub_bars = job_bars.map((bar) => {
+    return <div className="work__timeline__subbar" style={{ width: bar[0] + "%", marginLeft: bar[1] + "%" }} />
+  });
+
+  return (
+    <div className="work__timeline">
+      <p className="work__timeline__now">Now</p>
+      <p className="work__timeline__start">{first_year}</p>
+      {sub_bars}
+      <div className="work__timeline__bar" style={{ width: bar_width + "%", marginLeft: bar_start + "%" }} />
+    </div>
+  )
+}
+
 
 function Work() {
+
+  let jobs = [
+    {
+      'title': 'Software Engineer',
+      'company': 'Perspectum',
+      'place': 'Oxford, UK',
+      'from': "01-2020",
+      'to': null,
+      'description': "I work mainly as a full-stack developer of a Django web portal with multiple integrated services. I also do some team work management, communication with stakeholders, and create individual python packages and tools to be used by other teams.",
+      'slug': 'persp-swe'
+    },
+    {
+      'title': 'Test Engineer',
+      'company': 'Perspectum',
+      'place': 'Oxford, UK',
+      'from': "03-2019",
+      'to': "01-2020",
+      'description': 'Wrote BDD automated tests for a Django web portal using web scrapping tools. Created a few load tests that run hundreads of scenarios in parallel to test the portal robustness.',
+      'slug': 'persp-sqa'
+    },
+    {
+      'title': 'Flow Cytometry Technician',
+      'company': 'Instituto Gulbenkian de Ciência',
+      'place': 'Oeiras, PT',
+      'from': "01-2018",
+      'to': "03-2019",
+      'description': "Worked in maintaining a lab unit and teaching users how to use our tools. While in working there, I ended up re-working some of the institute's facilities websites, automatizing report creation in Python, and creating a video game to teach kids what we do in the lab. I ended up moving to a more software-oriented occupation after that since the software-related tasks were the most fun.",
+      'slug': 'igc-flow'
+    },
+    {
+      'title': "Finished Master's in Biomedical Engineering",
+      'company': 'Faculdade de Ciências da Universidade de Lisboa',
+      'place': 'Lisbon, PT',
+      'from': "11-2017",
+      'to': "11-2017",
+      'description': "",
+      'slug': 'masters'
+    },
+    {
+      'title': "Master's Thesis Research Intern",
+      'company': 'Institute of Neural Engineering',
+      'place': 'Graz, AT',
+      'from': "09-2016",
+      'to': "06-2017",
+      'description': "Designed and developed an experimental paradigm, and acquired and analysed data from brain signals while people moved their arm in a controlled environment. The results were then published in my Master's thesis and later worked into a paper released in 2020.",
+      'slug': 'master-intern'
+    },
+    {
+      'title': "Finished Bachelor's in Biomedical Engineering",
+      'company': 'Faculdade de Ciências da Universidade de Lisboa',
+      'place': 'Lisbon, PT',
+      'from': "09-2015",
+      'to': "09-2015",
+      'description': "",
+      'slug': 'bachelors'
+    },
+    {
+      'title': 'Research Intern',
+      'company': 'Institute of Neural Engineering',
+      'place': 'Berlin, DE',
+      'from': "06-2015",
+      'to': "09-2015",
+      'description': "At the end of my Bachelor's degree, I did this small neuroscience internship. I designed and conducted an experiment (with a lot of help from a PhD student). In the end, I wrote my Bachelor's thesis and a paper with the contents",
+      'slug': 'bachelor-intern'
+    }
+  ];
+
+  const [barWidth, setBarWidth] = useState(0);
+  const [barStart, setBarStart] = useState(0);
+
+  function changeBarWidth(event) {
+    setBarStart(event.target.getAttribute('data-barstart'));
+    setBarWidth(event.target.getAttribute('data-barwidth'));
+  }
+
+  let first_date = moment();
+  jobs.map(job => {
+    let _to_moment = job.to ? moment(job.to, "MM-YYYY") : moment();
+    let _from_moment = moment(job.from, "MM-YYYY");
+    let _duration = _to_moment.diff(_from_moment, 'months');
+    job['from'] = _from_moment.format("MMM YYYY");
+    job['to'] = job.to ? _to_moment.format("MMM YYYY") : "Now";
+    job['_from'] = _from_moment;
+    job['_to'] = _to_moment;
+    job['date'] = _duration === 0 ? job.from : job.from + "-" + job.to;
+    job['duration'] = _duration === 0 ? 1 : _duration;
+
+    if (first_date.diff(_from_moment) > 0) {
+      first_date = _from_moment;
+    }
+  })
+  let time_span = moment().diff(first_date, "months");
+  jobs.map(job => {
+    job['bar_start'] = 100 * job._from.diff(first_date, "months") / time_span;
+    job['bar_width'] = 100 * job.duration / time_span;
+  })
+
+  let job_bars = jobs.map(job => [job.bar_width, job.bar_start]);
+
   return (
     <div className='container' id='work'>
       <div className='container__content'>
         <h1>My career so far</h1>
         <div className='work'>
-          <p>Under construction :)</p>
+          <TimelineBar first_year={first_date.format('YYYY')} job_bars={job_bars} bar_width={barWidth} bar_start={barStart} />
+
+          {jobs.map((job) => {
+            return (
+              <div className="work__item" key={job.slug} onMouseEnter={changeBarWidth} data-barstart={job.bar_start} data-barwidth={job.bar_width}>
+                <p className="work__item__place"><i class="fa fa-map-marker-alt" aria-hidden="true" />  {job.place}</p>
+                <h2>{job.title}</h2>
+                <h3>{job.company}</h3>
+                <p className="work__item__date">{job.date}</p>
+                <p>{job.description}</p>
+              </div>
+            )
+          })}
         </div>
       </div>
     </div>
