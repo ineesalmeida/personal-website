@@ -100,8 +100,20 @@
         &__item {
             min-width: 30rem;
         }
-        // &__timeline {
-        //     display: none;
-        // }
+
+        &__timeline {
+            &__now {
+                position: absolute;
+                top: -3rem;
+                left: 0;
+            }
+
+            &__start {
+                position: absolute;
+                bottom: -3rem;
+                left: 0;
+            }
+        }
+
     }
 }  
