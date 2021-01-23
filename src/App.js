@@ -70,7 +70,7 @@ function Header() {
     <div className='container' id='header'>
       <div className='container__content'>
         <div className='header'>
-          <img src={process.env.PUBLIC_URL + '/me.jpg'} className="header__picture" />
+          <img src={process.env.PUBLIC_URL + '/me.jpg'} className="header__picture" alt="me" />
           <div className="header__text">
             <h1>Inês</h1><h1> Almeida</h1>
             <br />
