@@ -1,6 +1,6 @@
 import './sass/main.scss';
 import moment from 'moment';
-import React, { useState } from "react";
+import { useState } from "react";
 
 const tag_color = {
   Code: '#386FA4',
@@ -105,7 +105,7 @@ function About() {
             I've lived in 6 different countries in Europe; I've published two neuroscience papers; I was president of a non-profit organization for 2 years while in university; I built a video game to teach kids about a specific science topic.
           </p>
           <p>
-            My most recent project is building a <b>VR video-game in Unity (C#)</b> with my <a target="_blank" rel="noreferrer" href="https://www.diogo-cunha.com/">best friend and partner</a> in my free time, which has been a lot of fun.
+            My most recent project is building a <b>VR video-game in Unity (C#)</b> with my <a href="https://www.diogo-cunha.com/" target="_blank" rel="noreferrer" >best friend and partner</a> in my free time, which has been a lot of fun.
           </p>
           <p>
             Anyway: welcome to my personal website.
@@ -363,18 +363,15 @@ function Work() {
   )
 }
 
-function App() {
-  return (
-    <div>
-      <div className="vignete-top" />
-      <NavBar items={{ About: '#about', Projects: '#projects', Work: '#work' }} />
-      <Header />
-      <About />
-      <Projects />
-      <Work />
-      <div className="vignete-bottom" />
-    </div>
-  );
-}
+const App = () =>
+  <div>
+    <div className="vignete-top" />
+    <NavBar items={{ About: '#about', Projects: '#projects', Work: '#work' }} />
+    <Header />
+    <About />
+    <Projects />
+    <Work />
+    <div className="vignete-bottom" />
+  </div>
 
 export default App;
