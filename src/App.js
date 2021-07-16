@@ -62,7 +62,7 @@ function Header() {
     {
       keywork: 'CV',
       icon: 'fas fa-file-alt',
-      link: './cv/index.html',
+      link: './cv',
     },
   ]
 
