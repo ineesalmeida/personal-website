@@ -96,19 +96,19 @@ function About() {
             <img src="climbing.png" alt="Climbing" />
           </div>
           <p>
-            Hi,
+            I like <b>bouldering</b>, <b>programming</b>, <b>cooking</b>, and <b>graphic design</b> among other things.
           </p>
           <p>
-            I am Inês: I like <b>bouldering</b>, <b>programming</b>, <b>cooking</b>, and <b>graphic design</b> among other things. I'm also a <b>Software Engineer</b> with a Master's in <b>Biomedical Engineering and Biophysics</b>. I currently work as a full-stack developer, which I quite enjoy.
+            I'm also a full-stack <b>Software Engineer</b> with a Master's in <b>Biomedical Engineering</b>.
           </p>
           <p>
-            I've lived in 6 different countries in Europe; I've published two neuroscience papers; I was president of a non-profit organization for 2 years while in university; I built a video game to teach kids about a specific science topic.
+            I've lived in 6 different countries in Europe; I've published two neuroscience papers; I was president of a non-profit organization for 2 years while in university; and I built a video game to teach kids about a specific science topic.
           </p>
           <p>
-            My most recent project is building a <b>VR video-game in Unity (C#)</b> with my <a href="https://www.diogo-cunha.com/" target="_blank" rel="noreferrer" >best friend and partner</a> in my free time, which has been a lot of fun.
+            My most recent project is <a href="https://beersandboomerangs.com">Beers and Boomerangs</a> - a VR video-game built in Unity (C#) with my <a href="https://www.diogo-cunha.com/" target="_blank" rel="noreferrer" >best friend and partner</a> in my free time, which has been a lot of fun.
           </p>
           <p>
-            Anyway: welcome to my personal website.
+            Welcome to my personal website.
           </p>
         </div>
       </div>
@@ -171,11 +171,11 @@ function Projects() {
       content: "I had a question in mind: who are the friends I talk to the most in my Facebook chat? When do we talk the most? What were the words that were most specific to each friend? To answer that, I created an offline python tool that did all that processing from the information downloaded from the website. The results were quite fun to explore!",
     },
     {
-      title: "Aussie BBQ Survival",
+      title: "Beers and Boomerangs",
       slug: 'vrgame',
       date: "On going",
       keyword: "Code",
-      link: null,
+      link: "https://beersandboomerangs.com",
       content: "Me and my partner's latest project: to build a VR video game from scratch! We're using Unity (C#) and blender, and learning a bunch. We've been building it in our free time for a while now. We plan to release it by the end of 2021.",
     },
     {
@@ -254,7 +254,7 @@ function Work() {
       'place': 'Oxford, UK',
       'from': "01-2020",
       'to': null,
-      'description': "I work mainly as a full-stack developer of a Django web portal with multiple integrated services. I also do some team work management, communication with stakeholders, and create individual python packages and tools to be used by other teams.",
+      'description': "I work mainly as a full-stack developer of a Django web portal with multiple integrated services. I also do some team management, communication with stakeholders, and create individual python packages and tools to be used by other teams.",
       'slug': 'persp-swe'
     },
     {
