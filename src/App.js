@@ -176,7 +176,7 @@ function Projects() {
       date: "On going",
       keyword: "Code",
       link: "https://beersandboomerangs.com",
-      content: "Me and my partner's latest project: to build a VR video game from scratch! We're using Unity (C#) and blender, and learning a bunch. We've been building it in our free time for a while now. We plan to release it by the end of 2021.",
+      content: "Me and my partner's latest project: to build a VR video game from scratch! We're using Unity (C#) and blender, and learning a bunch. We've been building it in our free time for a while now. We plan to release it by the mid of 2022.",
     },
     {
       title: "Cell by Cell",
@@ -249,11 +249,20 @@ function Work() {
 
   let jobs = [
     {
+      'title': 'Video Game Developer',
+      'company': 'Witty Platypus',
+      'place': 'Sweden',
+      'from': "03-2022",
+      'to': null,
+      'description': "I am currently co-developing a VR game called Beers and Boomerangs. I built two arcade modes Unity (C#), integration to Steam and Oculus APIs and a lot of other game features. Also did most of the 2D art and UI design.",
+      'slug': 'bnb'
+    },
+    {
       'title': 'Software Engineer',
       'company': 'Perspectum',
       'place': 'Oxford, UK',
       'from': "01-2020",
-      'to': null,
+      'to': "03-2022",
       'description': "I work mainly as a full-stack developer of a Django web portal with multiple integrated services. I also do some team management, communication with stakeholders, and create individual python packages and tools to be used by other teams.",
       'slug': 'persp-swe'
     },
@@ -275,15 +284,15 @@ function Work() {
       'description': "Worked in maintaining a lab unit and teaching users how to use our tools. While in working there, I ended up re-working some of the institute's facilities websites, automatizing report creation in Python, and creating a video game to teach kids what we do in the lab. I ended up moving to a more software-oriented occupation after that since the software-related tasks were the most fun.",
       'slug': 'igc-flow'
     },
-    {
-      'title': "Master's in Biomedical Engineering",
-      'company': 'Faculdade de Ciências da Universidade de Lisboa',
-      'place': 'Lisbon, PT',
-      'from': "09-2015",
-      'to': "11-2017",
-      'description': "",
-      'slug': 'masters'
-    },
+    // {
+    //   'title': "Master's in Biomedical Engineering",
+    //   'company': 'Faculdade de Ciências da Universidade de Lisboa',
+    //   'place': 'Lisbon, PT',
+    //   'from': "09-2015",
+    //   'to': "11-2017",
+    //   'description': "",
+    //   'slug': 'masters'
+    // },
     {
       'title': "Master's Thesis Research Intern",
       'company': 'Institute of Neural Engineering',
