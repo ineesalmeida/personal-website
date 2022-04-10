@@ -37,32 +37,32 @@ function Header() {
     {
       keywork: 'Email',
       icon: 'fas fa-envelope-square',
-      link: 'mailto:contact@ines-almeida.com',
+      link: 'mailto:alwoods@utexas.edu',
     },
     {
       keywork: 'LinkedIn',
       icon: 'fab fa-linkedin',
-      link: 'https://www.linkedin.com/in/ines-de-almeida/',
+      link: 'https://www.linkedin.com/in/woods-aaron/',
     },
     {
       keywork: 'Github',
       icon: 'fab fa-github',
-      link: 'https://github.com/ineesalmeida',
+      link: 'https://github.com/guitarbeat',
     },
     {
-      keywork: 'Google Scholar',
-      icon: 'fas fa-graduation-cap',
-      link: 'https://scholar.google.com/citations?user=MDKePnkAAAAJ&hl=en',
+      keywork: 'ORCID',
+      icon: 'fas fa-graduation-cap', 
+      link: 'https://orcid.org/0000-0001-6786-9243',
     },
     {
       keywork: 'Instagram',
       icon: 'fab fa-instagram',
-      link: 'https://www.instagram.com/inees_almeida/',
+      link: 'https://www.instagram.com/guitarbeat/',
     },
     {
       keywork: 'CV',
       icon: 'fas fa-file-alt',
-      link: './cv',
+      link: '/cv.pdf',
     },
   ]
 
@@ -70,15 +70,15 @@ function Header() {
     <div className='container' id='header'>
       <div className='container__content'>
         <div className='header'>
-          <img src={process.env.PUBLIC_URL + '/me.jpg'} className="header__picture" alt="me" />
+          <img src={process.env.PUBLIC_URL + '/profile.png'} className="header__picture" alt="me" />
           <div className="header__text">
-            <h1>Inês</h1><h1> Almeida</h1>
+            <h1>Aaron</h1><h1> Woods</h1>
             <br />
-            <h2>Software Engineer</h2><h2> | </h2><h2>Biomedical Engineer MSc</h2>
+            <h2>Biomedical Engineer</h2><h2> | </h2><h2>Artist</h2><h2> | </h2><h2>Scientist</h2>
             <br />
             <div className="social tooltip">
               {social_media.map(s => <SocialMedia key={s.keywork} {...s} />)}
-              <span className="tooltiptext">Email: contact@ines-almeida.com</span>
+              <span className="tooltiptext">Email: alwoods@utexas.edu</span>
             </div>
           </div>
         </div>
@@ -93,19 +93,19 @@ function About() {
       <div className='container__content'>
         <div className='about-me'>
           <div className='about-me__img'>
-            <img src="climbing.png" alt="Climbing" />
+            <img src="guitar.png" alt="Guitar" />
           </div>
           <p>
-            I like <b>bouldering</b>, <b>programming</b>, <b>cooking</b>, and <b>graphic design</b> among other things.
+            I like <b>data analysis</b>, <b>problem solving</b>, <b>research</b>, and <b>music making</b> among other things.
           </p>
           <p>
-            I'm also a full-stack <b>Software Engineer</b> with a Master's in <b>Biomedical Engineering</b>.
+            I'm also a graduate researcher at <b>The University of Texas at Austin</b> with a Bachelor's in <b>Engingeering Leadership</b>.
           </p>
           <p>
-            I've lived in 6 different countries in Europe; I've published two neuroscience papers; I was president of a non-profit organization for 2 years while in university; and I built a video game to teach kids about a specific science topic.
+          I will add more information about myself in the future.
           </p>
           <p>
-            My most recent project is <a href="https://beersandboomerangs.com">Beers and Boomerangs</a> - a VR video-game built in Unity (C#) with my <a href="https://www.diogo-cunha.com/" target="_blank" rel="noreferrer" >best friend and partner</a> in my free time, which has been a lot of fun.
+            I like turtles.
           </p>
           <p>
             Welcome to my personal website.
@@ -135,80 +135,14 @@ function ProjectCard({ title, content, slug, link, keyword, date }) {
 
 function Projects() {
   let projects = [
-    {
-      title: "Hugo CV Template",
-      slug: 'hugo',
-      date: "2020",
-      keyword: "Code",
-      link: "https://github.com/ineesalmeida/almeida-cv",
-      content: "I built an open-source Hugo template for an online PDF printable CV. Well, I built it for myself when I had the need to create a beautiful, easy to edit from anywhere CV for myself; I then shared it because why not! It's not easy to know how many people have used it, but so far, its repo has been started 30 times and forked 16.",
-    },
-    {
-      title: "Is neural activity detected by ERP-based brain-computer interfaces task specific?",
-      slug: 'paper2016',
-      date: "2016",
-      keyword: "Paper",
-      link: "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0165556",
-      content: "I did a 2-month internship in Berlin at the Neurotechnology group of TU Berlin. This paper contains the results of that 2-month experiment.",
 
-    },
-    {
-      title: "Using machine learning to reveal the population vector from EEG signals",
-      slug: 'paper2020',
-      date: "2020",
-      keyword: "Paper",
-      link: "https://iopscience.iop.org/article/10.1088/1741-2552/ab7490/meta",
-      content: "For my Master's thesis, I researched using non-invasive brain signals to decode arm movement at the Institute of Neural Engineering in Graz (Austria). This paper was the result. I co-authored it with the PhD student that helped me with everything along the way.",
-    },
-    {
-      title: "Who you talk to",
-      slug: 'paper3',
-      date: "2019",
-      keyword: "Code",
-      style: {
-        backgroundColor: 'rgba(white, 0.5)',
-      },
-      content: "I had a question in mind: who are the friends I talk to the most in my Facebook chat? When do we talk the most? What were the words that were most specific to each friend? To answer that, I created an offline python tool that did all that processing from the information downloaded from the website. The results were quite fun to explore!",
-    },
-    {
-      title: "Beers and Boomerangs",
-      slug: 'vrgame',
-      date: "On going",
-      keyword: "Code",
-      link: "https://beersandboomerangs.com",
-      content: "Me and my partner's latest project: to build a VR video game from scratch! We're using Unity (C#) and blender, and learning a bunch. We've been building it in our free time for a while now. We plan to release it by the end of 2021.",
-    },
-    {
-      title: "Cell by Cell",
-      slug: 'flowgame',
-      date: "2018",
-      keyword: "Code",
-      link: "http://facilities.igc.gulbenkian.pt/flowcytometry/cell_by_cell_web/index.html",
-      content: "While working at a research lab as a Flow Cytometry technician, I was given the challenge to create something to teach children and their parents about a science instrument - cell sorting. The result was a video game built in Unity where the player was sorting cells by their color. Unfortunately, I didn't have the time to polish it and add a tutorial to users. Before and while playing, we introduced some more scientific concepts.",
-    },
-    {
-      title: "Warm Sweater",
-      slug: 'sweater',
-      date: "2020",
-      keyword: "Misc",
-      link: null,
-      content: "I knitted a large warm sweater for my best-friend and partner. It took 55 hours and 700 meters of wool. I'm very proud of it :)",
-    },
     {
       title: "Personal website",
       slug: 'personal-website',
-      date: "2021",
+      date: "2022",
       keyword: "Code",
       link: null,
       content: "Small weekend project that has still a bunch of features to add. I like to take these chances to explore new tools and practice. I used sass, flexbox, CSS animations and React."
-    },
-    {
-      title: "Virtual Library",
-      slug: 'flask-lib',
-      date: "2019",
-      keyword: "Code",
-      link: null,
-      content: "My mum was getting lost in all her thousands of books, and wanted to go through each and note down where it was. For her birthday, I created a DB with a nice front-end made in Flask and Material where she could, add, edit, query or remove book registries, and import and export them as CSVs to open in Excel.",
     },
   ]
 
