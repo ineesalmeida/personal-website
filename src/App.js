@@ -99,13 +99,13 @@ function About() {
             I like <b>data analysis</b>, <b>problem solving</b>, <b>research</b>, and <b>music making</b> among other things.
           </p>
           <p>
-            I'm also a graduate researcher at <b>The University of Texas at Austin</b> with a Bachelor's in <b>Engingeering Leadership</b>.
+            I'm currently pursuing a Ph.d. at <b>The University of Texas at Austin.</b> I recently obtained a <b>B.S. in Engingeering Leadership</b> at The University of Texas at El Paso.
           </p>
           <p>
-          I will add more information about myself in the future.
+          Through the use of computational approaches, I am investigating ways to improve the qualitative and quantitative analysis of data received from various imaging modalities. I'm interested in science and engineering because it allows me to spend time learning new things while also allowing me to express myself creatively as an artist.
           </p>
           <p>
-            I like turtles.
+            I am currently in the FOIL lab, run by Dr. Andrew Dunn. This lab develops and deploys imaging technologies for the study of neurovascular physiology and disease.  
           </p>
           <p>
             Welcome to my personal website.
@@ -142,7 +142,15 @@ function Projects() {
       date: "2022",
       keyword: "Code",
       link: null,
-      content: "Small weekend project that has still a bunch of features to add. I like to take these chances to explore new tools and practice. I used sass, flexbox, CSS animations and React."
+      content: "Random creative endeavor with a slew of features left to come. I prefer to take advantage of these opportunities to experiment with new tools and practice. Sass, flexbox, CSS animations, and React were all used. This project would not have been possible without Ines Almeida's help.",
+    },
+    {
+      title: "Calibration of liquid crystal variable retarders",
+      slug: 'Publication',
+      date: "2022",
+      keyword: "Paper",
+      link: "https://opg.optica.org/ao/fulltext.cfm?uri=ao-59-34-10673&id=443588",
+      content: "I contributed to this paper by writing MATLAB and C++ code that enabled the LCVR to be calibrated using a common-path interferometer.",
     },
   ]
 
@@ -183,59 +191,68 @@ function Work() {
 
   let jobs = [
     {
-      'title': 'Software Engineer',
-      'company': 'Perspectum',
-      'place': 'Oxford, UK',
-      'from': "01-2020",
+      'title': 'Graduate Student Researcher',
+      'company': 'Department of Biomedical Engineering | Advisor: Dr. Andrew Dunn',
+      'place': 'Austin, TX',
+      'from': "08-2021",
       'to': null,
-      'description': "I work mainly as a full-stack developer of a Django web portal with multiple integrated services. I also do some team management, communication with stakeholders, and create individual python packages and tools to be used by other teams.",
+      'description': "Developing microvasculature optical imaging techniques. Investigating digital image processing and quantification. Training on surgical craniotomies for biomedical imaging",
       'slug': 'persp-swe'
     },
     {
-      'title': 'Test Engineer',
-      'company': 'Perspectum',
-      'place': 'Oxford, UK',
-      'from': "03-2019",
-      'to': "01-2020",
-      'description': 'Wrote BDD automated tests for a Django web portal using web scrapping tools. Created a few load tests that run hundreads of scenarios in parallel to test the portal robustness.',
-      'slug': 'persp-sqa'
+      'title': 'Graduate Student Researcher',
+      'company': 'Department of Biomedical Engineering | Advisor: Dr. Mia Markey',
+      'place': 'El Paso, TX',
+      'from': "05-2021",
+      'to': "08-2021",
+      'description': "Design of decision support system for breast cancer patients",
+      'slug': 'persp-swe'
     },
     {
-      'title': 'Flow Cytometry Technician',
-      'company': 'Instituto Gulbenkian de Ciência',
-      'place': 'Oeiras, PT',
+      'title': 'Graduate Student Researcher',
+      'company': 'Department of Biomedical Engineering | Advisor: Dr. Evan Wang',
+      'place': 'Austin, TX',
+      'from': "08-2021",
+      'to': "10-2021",
+      'description': "Conducted EEG data acquisition and analysis. Created SOP for fabricating dry electrodes for long recordings",
+      'slug': 'persp-swe'
+    },
+    {
+      'title': "Undergraduate Student Researcher",
+      'company': 'CREaTE Lab | Advisor: Dr. Peter Golding',
+      'place': 'El Paso, TX',
+      'from': "08-2019",
+      'to': "12-2020",
+      'description': "Innovated on engineering education regarding ethics and leadership. Programmed advising software to assist with course recommendation. Optimized the advising process to better falicitate faculty and student",
+      'slug': 'persp-swe'
+    },
+    {
+      'title': "Undergraduate Student Researcher",
+      'company': 'Adult Neurology Ketogenic Diet Therapy Clinic | Advisor: Dr. Elizabeth Felton',
+      'place': 'Madison, WI',
+      'from': "05-2019",
+      'to': "08-2019",
+      'description': "Data visualization of patient data for clinical and dietary analysis. Managed HIPAA compliance, safety, and ethics for patient research. Shadowed doctor-patient relationship and treatment of epilepsy.",
+      'slug': 'persp-swe'
+    },
+    {
+      'title': "Undergraduate Student Researcher",
+      'company': 'Biomedical Optics Lab | Advisor: Dr. Jeremy Rogers',
+      'place': 'Madison, WI',
+      'from': "05-2018",
+      'to': "08-2018",
+      'description': "Constructed an interferometer to measure phase delay.Programmed an automated calibration software for optical equipment. Inspected laboratory standards and practices for maintaining lab.",
+      'slug': 'persp-swe'
+    },
+    {
+      'title': "Undergraduate Teaching Assistant",
+      'company': 'Department of Engineering Education and Leadership | Design Nature',
+      'place': 'El Paso, TX',
       'from': "01-2018",
-      'to': "03-2019",
-      'description': "Worked in maintaining a lab unit and teaching users how to use our tools. While in working there, I ended up re-working some of the institute's facilities websites, automatizing report creation in Python, and creating a video game to teach kids what we do in the lab. I ended up moving to a more software-oriented occupation after that since the software-related tasks were the most fun.",
-      'slug': 'igc-flow'
+      'to': "05-2018",
+      'description': "Coordinated the trainings of students to use a fabrication laboratory. Taught procedures on computer-aided design and simulation. Directed the development process to build working prototypes.",
+      'slug': 'persp-swe'
     },
-    {
-      'title': "Master's in Biomedical Engineering",
-      'company': 'Faculdade de Ciências da Universidade de Lisboa',
-      'place': 'Lisbon, PT',
-      'from': "09-2015",
-      'to': "11-2017",
-      'description': "",
-      'slug': 'masters'
-    },
-    {
-      'title': "Master's Thesis Research Intern",
-      'company': 'Institute of Neural Engineering',
-      'place': 'Graz, AT',
-      'from': "09-2016",
-      'to': "06-2017",
-      'description': "Designed and developed an experimental paradigm, and acquired and analysed data from brain signals while people moved their arm in a controlled environment. The results were then published in my Master's thesis and later worked into a paper released in 2020.",
-      'slug': 'master-intern'
-    },
-    {
-      'title': 'Research Intern',
-      'company': 'Institute of Neural Engineering',
-      'place': 'Berlin, DE',
-      'from': "06-2015",
-      'to': "09-2015",
-      'description': "At the end of my Bachelor's degree, I did this small neuroscience internship. I designed and conducted an experiment (with a lot of help from a PhD student). In the end, I wrote my Bachelor's thesis and a paper with the contents",
-      'slug': 'bachelor-intern'
-    }
   ];
 
   const [barHeight, setbarHeight] = useState(0);
