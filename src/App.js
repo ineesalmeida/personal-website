@@ -112,7 +112,7 @@ function About() {
             I'm currently pursuing a Ph.d. at <b>The University of Texas at Austin.</b> I recently obtained a <b>B.S. in Engingeering Leadership</b> at The University of Texas at El Paso.
           </p>
           <p>
-          Through the use of computational approaches, I am investigating ways to improve the qualitative and quantitative analysis of data received from various imaging modalities. I'm interested in science and engineering because it allows me to spend time learning new things while also allowing me to express myself creatively as an artist.
+            Through the use of computational approaches, I am investigating ways to improve the qualitative and quantitative analysis of data received from various imaging modalities. I'm interested in science and engineering because it allows me to spend my time discovering new things while simultaneously expressing myself creatively as an artist.
           </p>
           <p>
             I am currently in the FOIL lab, run by Dr. Andrew Dunn. This lab develops and deploys imaging technologies for the study of neurovascular physiology and disease.  
@@ -287,6 +287,15 @@ function Work() {
       'place': 'El Paso, TX',
       'from': "08-2018",
       'to': "012-2019",
+      'description': "",
+      'slug': 'persp-swe'
+    },
+    {
+      'title': "",
+      'company': '',
+      'place': 'El Paso, TX',
+      'from': "",
+      'to': "",
       'description': "",
       'slug': 'persp-swe'
     },
