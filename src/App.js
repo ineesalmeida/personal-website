@@ -105,21 +105,11 @@ function About() {
           <div className='about-me__img'>
             <img src="guitar.png" alt="Guitar" />
           </div>
-          <p>
-            I like <b>data analysis</b>, <b>problem solving</b>, <b>research</b>, and <b>music making</b> among other things.
-          </p>
-          <p>
-            I'm currently pursuing a Ph.d. at <b>The University of Texas at Austin.</b> I recently obtained a <b>B.S. in Engingeering Leadership</b> at The University of Texas at El Paso.
-          </p>
-          <p>
-            Through the use of computational approaches, I am investigating ways to improve the qualitative and quantitative analysis of data received from various imaging modalities. I'm interested in science and engineering because it allows me to spend my time discovering new things while simultaneously expressing myself creatively as an artist.
-          </p>
-          <p>
-            I am currently in the FOIL lab, run by Dr. Andrew Dunn. This lab develops and deploys imaging technologies for the study of neurovascular physiology and disease.  
-          </p>
-          <p>
-            Welcome to my personal website.
-          </p>
+          <p><strong>About Me</strong></p>
+          <p>I grew up in El Paso, TX. I find that it&apos;s very easy for me to get into a lot of things. Entrepreneurship, astronomy, music creation, and artistry were all potential career paths for me.</p>
+          <p>The one that won out, with the integration of the others, was becoming a scientist. I am currently in the <a href="https://foil.bme.utexas.edu/">FOIL lab, mentored by Dr. Andrew Dunn</a>. This lab creates and implements imaging technologies to examine blood flow and neurovascular anatomy.&nbsp;</p>
+          <p>As someone who strongly identifies as an artist and engineer, I feel I picked this career because it blends both aspects of that identity. I get to spend my time learning new things, and as a scientist, I get to apply that knowledge artistically to benefit people.</p>
+          <p><strong>Welcome to my personal website.</strong></p>
         </div>
       </div>
     </div >
