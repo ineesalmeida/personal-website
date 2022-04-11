@@ -84,7 +84,7 @@ function Header() {
           <div className="header__text">
             <h1>Aaron</h1><h1> Lorenzo</h1><h1> Woods</h1>
             <br />
-            <h2>Biomedical Engineer</h2><h2> | </h2><h2>Artist</h2><h2> | </h2><h2>Scientist</h2>
+            <h2>Biomedical Engineer</h2><h2> | </h2><h2>Artist/Scientist</h2>
             <br />
             <div className="social tooltip">
               {social_media.map(s => <SocialMedia key={s.keywork} {...s} />)}
@@ -105,11 +105,11 @@ function About() {
           <div className='about-me__img'>
             <img src="guitar.png" alt="Guitar" />
           </div>
-          <p><strong>About Me</strong></p>
+          <h2>About Me</h2>
           <p>I grew up in El Paso, TX. I find that it&apos;s very easy for me to get into a lot of things. Entrepreneurship, astronomy, music creation, and artistry were all potential career paths for me.</p>
           <p>The one that won out, with the integration of the others, was becoming a scientist. I am currently in the <a href="https://foil.bme.utexas.edu/">FOIL lab, mentored by Dr. Andrew Dunn</a>. This lab creates and implements imaging technologies to examine blood flow and neurovascular anatomy.&nbsp;</p>
-          <p>As someone who strongly identifies as an artist and engineer, I feel I picked this career because it blends both aspects of that identity. I get to spend my time learning new things, and as a scientist, I get to apply that knowledge artistically to benefit people.</p>
-          <p><strong>Welcome to my personal website.</strong></p>
+          <p>As someone who strongly identifies as an artist and engineer, I feel I picked this career because it blends both aspects of that identity. I get to spend my time learning new things, and as a scientist, I get to creatively apply that knowledge to benefit people.</p>
+          <h3>Welcome to my personal website.</h3>
         </div>
       </div>
     </div >
@@ -159,6 +159,14 @@ function Projects() {
       keyword: "Misc",
       link: "https://www.youtube.com/watch?v=3L-qHfODnI4",
       content: "I was the project manager for this undergraduate senior capstone project. Our task was to improve a military data collection tool for network convergence. We used formative evaluation methods and usability testing to determine the best way to design the database and GUI.",
+    },
+    {
+      title: "Made a song every day",
+      slug: 'Music',
+      date: "2017",
+      keyword: "Misc",
+      link: "https://nini.bandcamp.com/",
+      content: "When I first started making music, I set a goal of writing a song every day during my undergraduate degree's winter break. It was a difficult challenge, and some of the songs were terrible, but I learned a lot. I'm not particularly proud of any of the songs that resulted from this project, but rather, I'm proud of the process as a whole. Every day, I recorded, edited, mastered, and distributed songs. I haven't been as musically productive since.",
     },
   ]
 
@@ -215,7 +223,7 @@ function Work() {
       'to': null,
       'description': "The primary purpose of the Executive Coordinating Committee (ECC) is to provide leadership to – and coordinate the activities of - the Board as a whole to ensure excellence in fulfilling high-level governance duties.",
       'slug': 'persp-swe'
-    },
+    },/*
     {
       'title': 'Graduate Researcher',
       'company': 'Department of Biomedical Engineering | Advisor: Dr. Mia Markey',
@@ -233,7 +241,7 @@ function Work() {
       'to': "10-2021",
       'description': "Conducted EEG data acquisition and analysis. Created SOP for fabricating dry electrodes for long recordings",
       'slug': 'persp-swe'
-    },
+    },*/
     {
       'title': "Community Outreach Specialist",
       'company': 'University of Texas at El Paso',
@@ -242,7 +250,7 @@ function Work() {
       'to': "07-2020",
       'description': "Develop comprehensive marketing programs for outreach/recruiting activities. Assist Program Manager in developing program curriculum and production of materials. Design methods that evaluate program success, making adjustments as appropriate quantifiably. Visit outreach sites and conduct program education and exhibit presentations to audiences",
       'slug': 'persp-swe'
-    },
+    }, /*
     {
       'title': "Undergraduate Researcher",
       'company': 'CREaTE Lab | Advisor: Dr. Peter Golding',
@@ -251,9 +259,9 @@ function Work() {
       'to': "12-2020",
       'description': "Innovated on engineering education regarding ethics and leadership. Programmed advising software to assist with course recommendation. Optimized the advising process to better falicitate faculty and student",
       'slug': 'persp-swe'
-    },
+    },*/
     {
-      'title': "Undergraduate Researcher",
+      'title': "UG Research in Clinical Data Science",
       'company': 'Adult Neurology Ketogenic Diet Therapy Clinic | Advisor: Dr. Elizabeth Felton',
       'place': 'Madison, WI',
       'from': "05-2019",
@@ -262,7 +270,7 @@ function Work() {
       'slug': 'persp-swe'
     },
     {
-      'title': "Undergraduate Researcher",
+      'title': "UG Research in Optics and Image Processing",
       'company': 'Biomedical Optics Lab | Advisor: Dr. Jeremy Rogers',
       'place': 'Madison, WI',
       'from': "05-2018",
@@ -287,7 +295,7 @@ function Work() {
       'to': "05-2018",
       'description': "Coordinated the trainings of students to use a fabrication laboratory. Taught procedures on computer-aided design and simulation. Directed the development process to build working prototypes.",
       'slug': 'persp-swe'
-    },
+    },/*
     {
       'title': "Project Analyst",
       'company': 'University of Texas at El Paso',
@@ -296,7 +304,7 @@ function Work() {
       'to': "12-2020",
       'description': "Extract and illustrate retention rates via visualization of historical enrollment data. Assist with in-person, online, and telephone inquiries for academic department operations. Iterative design of the department’s advising process and promotion for 200+ students. Mentorship of student staff for sustainability in future department data management and reporting",
       'slug': 'persp-swe'
-    },
+    },*/
     {
       'title': "Sound Engineering Technician",
       'company': 'Beacon Hill Recording Studios',
@@ -335,7 +343,7 @@ function Work() {
     job['to'] = job.to ? _to_moment.format("MMM YYYY") : "Now";
     job['_from'] = _from_moment;
     job['_to'] = _to_moment;
-    job['date'] = _duration === 0 ? job.from : job.from + "-" + job.to;
+    job['date'] = _duration === 0 ? job.from : job.from + " - " + job.to;
     job['duration'] = _duration === 0 ? 1 : _duration;
 
     if (first_date.diff(_from_moment) > 0) {
