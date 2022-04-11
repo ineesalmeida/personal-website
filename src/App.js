@@ -51,13 +51,23 @@ function Header() {
     },
     {
       keywork: 'ORCID',
-      icon: 'fas fa-graduation-cap', 
+      icon: 'fab fa-orcid', 
       link: 'https://orcid.org/0000-0001-6786-9243',
     },
     {
       keywork: 'Instagram',
       icon: 'fab fa-instagram',
       link: 'https://www.instagram.com/guitarbeat/',
+    },
+    {
+      keywork: 'Twitter',
+      icon: 'fab fa-twitter',
+      link: 'https://twitter.com/WoodsResearch',
+    },
+    {
+      keywork: 'ResearchGate',
+      icon: 'fab fa-researchgate',
+      link: 'https://www.researchgate.net/profile/Aaron-Woods-7',
     },
     {
       keywork: 'CV',
@@ -147,7 +157,7 @@ function Projects() {
     {
       title: "Calibration of liquid crystal variable retarders",
       slug: 'Publication',
-      date: "2022",
+      date: "2018",
       keyword: "Paper",
       link: "https://opg.optica.org/ao/fulltext.cfm?uri=ao-59-34-10673&id=443588",
       content: "I contributed to this paper by writing MATLAB and C++ code that enabled the LCVR to be calibrated using a common-path interferometer.",
@@ -251,6 +261,33 @@ function Work() {
       'from': "01-2018",
       'to': "05-2018",
       'description': "Coordinated the trainings of students to use a fabrication laboratory. Taught procedures on computer-aided design and simulation. Directed the development process to build working prototypes.",
+      'slug': 'persp-swe'
+    },
+    {
+      'title': "Board Member",
+      'company': 'Executive Coordinating Committee | ICC Austin',
+      'place': 'Austin, TX',
+      'from': "08-2021",
+      'to': null,
+      'description': "",
+      'slug': 'persp-swe'
+    },
+    {
+      'title': "Community Outreach Specialist",
+      'company': 'University of Texas at El Paso',
+      'place': 'El Paso, TX',
+      'from': "01-2020",
+      'to': "07-2020",
+      'description': "",
+      'slug': 'persp-swe'
+    },
+    {
+      'title': "Project Analyst",
+      'company': 'University of Texas at El Paso',
+      'place': 'El Paso, TX',
+      'from': "08-2018",
+      'to': "012-2019",
+      'description': "",
       'slug': 'persp-swe'
     },
   ];
