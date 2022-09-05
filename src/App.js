@@ -471,7 +471,14 @@ function Work() {
 const App = () => (
   <div>
     <div className="vignete-top" />
-    <NavBar items={{ About: "#about", Projects: "#projects", Work: "#work" }} />
+    <NavBar
+      items={{
+        About: "#about",
+        Projects: "#projects",
+        Work: "#work",
+        CV: "/cv.pdf",
+      }}
+    />
     <Header />
     <About />
     <Projects />
