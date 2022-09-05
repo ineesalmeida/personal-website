@@ -82,9 +82,9 @@ function Header() {
         <div className='header'>
           <img src={process.env.PUBLIC_URL + '/profile.png'} className="header__picture" alt="me" />
           <div className="header__text">
-            <h1>Aaron</h1><h1>Lorenzo</h1><h1>Woods</h1>
+            <h1>Aaron</h1><br /><h1>Lorenzo</h1><br /><h1>Woods</h1>
             <br />
-            <h2>Biomedical Engineering Ph.D. Student</h2><h2> | </h2><h2>Artist</h2>
+            <h2>Biomedical Engineering Ph.D. Student</h2><h2><br /></h2><h2>Artist</h2>
             <br />
             <div className="social tooltip">
               {social_media.map(s => <SocialMedia key={s.keywork} {...s} />)}
