@@ -86,7 +86,7 @@ function Header() {
             <br />
             <h2>Engineer </h2><h2>Artist </h2><h2>Scientist</h2>
               <br />
-              <h3>Ph.D. Student</h3><h3> in Biomedical Engineering</h3>
+              <h3>Biomedical Engineering Doctoral Student at UT Austin</h3>
             <br />
             <div className="social tooltip">
               {social_media.map(s => <SocialMedia key={s.keywork} {...s} />)}
