@@ -136,12 +136,10 @@ function About() {
           </p>
           <p>
             The one that won out, with the integration of the others, was
-            becoming a scientist. I am currently in the{" "}
-            <a href="https://foil.bme.utexas.edu/">
-              FOIL lab, mentored by Dr. Andrew Dunn
-            </a>
-            . This lab creates and implements imaging technologies to examine
-            blood flow and neurovascular anatomy.&nbsp;
+            becoming a scientist. I am currently in the
+            <a href="https://foil.bme.utexas.edu/">FOIL lab</a>, mentored by Dr.
+            Andrew Dunn. This lab creates and implements imaging technologies to
+            examine blood flow and neurovascular anatomy.&nbsp;
           </p>
           <p>
             As someone who strongly identifies as an artist and engineer, I feel
@@ -150,7 +148,6 @@ function About() {
             scientist, I get to creatively apply that knowledge to benefit
             people.
           </p>
-          <h3>Welcome to my personal website.</h3>
         </div>
       </div>
     </div>
