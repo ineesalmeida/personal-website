@@ -10,8 +10,8 @@
         margin-left: 3rem;
 
         & h1 {
-            font-size: 8rem;
-            line-height: 1.1em;
+            font-size: 5rem;
+            line-height: normal;
             margin-bottom: 0.4em;
             display: inline;
             transition: color 0.5s;
@@ -21,13 +21,24 @@
             }
         }
         & h2 {
-            font-size: 2.5rem;
-            line-height: 1.1em;
+            font-size: 3rem;
+            line-height: normal;
             display: inline;
             transition: color 0.5s;
     
             &:hover {
                 color: var(--color-primary-light);
+            }
+        }
+            & h3 {
+                
+            font-size: 2rem;
+            line-height: normal;
+            display: inline;
+            transition: color 0.5s;
+    
+            &:hover {
+                color: var(--color-terceary);
             }
         }
     }
@@ -42,7 +53,7 @@
 
 .social {
 
-    margin-top: 6rem;
+    margin-top: 2rem;
     
     &__icon {
         height: 4rem;
