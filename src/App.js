@@ -102,10 +102,7 @@ function About() {
             I'm also a full-stack <b>Software Engineer</b> with a Master's in <b>Biomedical Engineering</b>.
           </p>
           <p>
-            I've lived in 6 different countries in Europe; I've published two neuroscience papers; I was president of a non-profit organization for 2 years while in university; and I built a video game to teach kids about a specific science topic.
-          </p>
-          <p>
-            My most recent project is <a href="https://beersandboomerangs.com">Beers and Boomerangs</a> - a VR video-game built in Unity (C#) with my <a href="https://www.diogo-cunha.com/" target="_blank" rel="noreferrer" >best friend and partner</a> in my free time, which has been a lot of fun.
+            I've lived in 6 different countries in Europe; I've published two neuroscience papers; I was president of a non-profit organization for 2 years while in university; and I built a commercial VR video game with my partner from scratch.
           </p>
           <p>
             Welcome to my personal website.
@@ -150,7 +147,6 @@ function Projects() {
       keyword: "Paper",
       link: "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0165556",
       content: "I did a 2-month internship in Berlin at the Neurotechnology group of TU Berlin. This paper contains the results of that 2-month experiment.",
-
     },
     {
       title: "Using machine learning to reveal the population vector from EEG signals",
@@ -210,6 +206,22 @@ function Projects() {
       link: null,
       content: "My mum was getting lost in all her thousands of books, and wanted to go through each and note down where it was. For her birthday, I created a DB with a nice front-end made in Flask and Material where she could, add, edit, query or remove book registries, and import and export them as CSVs to open in Excel.",
     },
+    {
+      title: "Woord working - Learning Tower",
+      slug: 'ww-learntower',
+      date: "2022",
+      keyword: "Misc",
+      link: null,
+      content: "I got into wood working a built a Learning Tower for my niece from scratch with the little tools I had available. She loves it!",
+    },
+    {
+      title: "President of a non-profit music organization",
+      slug: 'vicentuna',
+      date: "2015",
+      keyword: "Misc",
+      link: "https://soundcloud.com/user-749301859",
+      content: "For 2 years during my University degree, I was president of a tradicional music group of 40 members that had several actvities throughout the year, including travel around Portugal and playing in music festivals.",
+    },
   ]
 
   let project_cards = projects.sort((a, b) => (a.date > b.date) ? -1 : 1).map((props) => <ProjectCard key={props.slug} {...props} />);
@@ -249,11 +261,20 @@ function Work() {
 
   let jobs = [
     {
+      'title': 'VR Game Developer',
+      'company': 'Witty Platypus',
+      'place': 'Lisbon, PT',
+      'from': "03-2020",
+      'to': null,
+      'description': "I was the lead developer of a VR game called 'Beers and Boomerangs' which was released in November 2022. The game was developer in C# (Unity) and featured a lot of physics based systems.",
+      'slug': 'bnb-gdev'
+    },
+    {
       'title': 'Software Engineer',
       'company': 'Perspectum',
       'place': 'Oxford, UK',
       'from': "01-2020",
-      'to': null,
+      'to': "03-2022",
       'description': "I work mainly as a full-stack developer of a Django web portal with multiple integrated services. I also do some team management, communication with stakeholders, and create individual python packages and tools to be used by other teams.",
       'slug': 'persp-swe'
     },
@@ -276,15 +297,6 @@ function Work() {
       'slug': 'igc-flow'
     },
     {
-      'title': "Master's in Biomedical Engineering",
-      'company': 'Faculdade de Ciências da Universidade de Lisboa',
-      'place': 'Lisbon, PT',
-      'from': "09-2015",
-      'to': "11-2017",
-      'description': "",
-      'slug': 'masters'
-    },
-    {
       'title': "Master's Thesis Research Intern",
       'company': 'Institute of Neural Engineering',
       'place': 'Graz, AT',
@@ -294,7 +306,7 @@ function Work() {
       'slug': 'master-intern'
     },
     {
-      'title': 'Research Intern',
+      'title': "Bachelor's Thesis Research Intern",
       'company': 'Institute of Neural Engineering',
       'place': 'Berlin, DE',
       'from': "06-2015",
