@@ -157,15 +157,15 @@ function Projects() {
             content: "I had a question in mind: who are the friends I talk to the most in my Facebook chat? When do we talk the most? What were the words that were most specific to each friend? To answer that, I created an offline python tool that did all that processing from the information downloaded from the website. The results were quite fun to explore!",
         },
         {
-            title: "Beers and Boomerangs",
+            title: "Beers & Boomerangs - VR Video Game",
             slug: 'vrgame',
             date: "On going",
             keyword: "Code",
-            link: "https://beersandboomerangs.com",
-            content: "Me and my partner's latest project: to build a VR video game from scratch! We're using Unity (C#) and blender, and learning a bunch. We've been building it in our free time for a while now. We plan to release it by the mid of 2022.",
+            link: "https://beersandboomerangs.com/play-the-game",
+            content: "Me and my partner's latest project: to build a VR video game from scratch! We're using Unity (C#) and blender, and learning a bunch. What started a free time project, grew into a proper game that is now released on 5 platforms!",
         },
         {
-            title: "Cell by Cell",
+            title: "Cell by Cell - Video Game",
             slug: 'flowgame',
             date: "2018",
             keyword: "Code",
@@ -212,6 +212,14 @@ function Projects() {
             link: "https://soundcloud.com/user-749301859",
             content: "For 2 years during my University degree, I was president of a tradicional music group of 40 members that had several actvities throughout the year, including travel around Portugal and playing in music festivals.",
         },
+        {
+            title: "Beers & Boomerangs website",
+            slug: 'web-design-bnb',
+            date: "2022",
+            keyword: "Code",
+            link: "https://beersandboomerangs.com/",
+            content: "Fully designed and build a small website to showcase the game we built with nothing but pure HTML, CSS and Javascript.",
+        },
     ]
 
     let project_cards = projects.sort((a, b) => (a.date > b.date) ? -1 : 1).map((props) => < ProjectCard key = { props.slug } {...props } />);
@@ -252,7 +260,7 @@ function Work() {
     let jobs = [{
             'title': 'VR Game Developer',
             'company': 'Witty Platypus',
-            'place': 'Lisbon, PT',
+            'place': 'Lisbon, PT/SE',
             'from': "03-2022",
             'to': null,
             'description': "I was the lead developer of a VR game called 'Beers and Boomerangs' which was released in November 2022. The game was developer in C# (Unity) and featured a lot of physics based systems.",
