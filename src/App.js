@@ -21,9 +21,9 @@ function NavBar({ items }) {
 
 function SocialMedia({ keywork, icon, link }) {
     return ( 
-        <div className = "social__icon" >
+        <div className = "network__icon" >
             <a href = { link } target = "_blank" rel = "noreferrer" >
-                <i className = { icon } title = { keywork } aria-label = { "Go to " + keywork }/> 
+                <i className = { icon } title = { keywork } aria-label={ "Go to " + keywork }/> 
             </a> 
         </div>
     )
@@ -74,7 +74,7 @@ function Header() {
                         <h2 > Software Engineer </h2><h2> | </h2> 
                         <h2> Biomedical Engineer MSc </h2> 
                         <br/>
-                        <div className = "social tooltip" > { social_media.map(s => < SocialMedia key = { s.keywork } {...s } />)} 
+                        <div className = "network tooltip" > { social_media.map(s => < SocialMedia key = { s.keywork } {...s } />)} 
                             <span className = "tooltiptext" > Email: contact @ines - almeida.com </span>
                         </div > 
                     </div> 
@@ -161,7 +161,7 @@ function Projects() {
             slug: 'vrgame',
             date: "On going",
             keyword: "Code",
-            link: "https://beersandboomerangs.com/play-the-game",
+            link: "https://beersandboomerangs.com/#play-the-game",
             content: "Me and my partner's latest project: to build a VR video game from scratch! We're using Unity (C#) and blender, and learning a bunch. What started a free time project, grew into a proper game that is now released on 5 platforms!",
         },
         {
