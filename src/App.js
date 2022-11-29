@@ -75,7 +75,7 @@ function Header() {
                         <h2> Biomedical Engineer MSc </h2> 
                         <br/>
                         <div className = "network tooltip" > { social_media.map(s => < SocialMedia key = { s.keywork } {...s } />)} 
-                            <span className = "tooltiptext" > Email: contact @ines - almeida.com </span>
+                            <span className = "tooltiptext" > Email: contact@ines-almeida.com </span>
                         </div > 
                     </div> 
                 </div> 
