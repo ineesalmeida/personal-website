@@ -92,11 +92,12 @@ function About() {
                     <div className = 'about-me__img' >
                         <img src = "climbing.png" alt = "Climbing" />
                     </div> 
+                    <p>Hi! </p> 
+                    <p>I 'm a full-stack <b>Software Engineer</b> with a Master's in <b> Biomedical Engineering </b>. </p>
                     <p>I like <b> bouldering </b>, <b>programming</b> , <b> cooking </b>, and <b>graphic design</b > among other things. </p> 
-                    <p>I 'm also a full-stack <b>Software Engineer</b> with a Master's in <b> Biomedical Engineering </b>. </p>
                     <p>I 've lived in 6 different countries in Europe; I've published two neuroscience papers; I was president of a non - profit organization
-                        for 2 years while in university; and I built a commercial VR video game with my partner from scratch. </p>
-                    <p>Welcome to my personal website. </p>
+                        for 2 years while in university; and I built a commercial VR video game with my partner from scratch - just to name a few adventures I've had in the papst few years. </p>
+                    <p>Welcome to my personal website! </p>
                 </div>
             </div>
         </div>
@@ -128,7 +129,7 @@ function Projects() {
             date: "2020",
             keyword: "Code",
             link: "https://github.com/ineesalmeida/almeida-cv",
-            content: "I built an open-source Hugo template for an online PDF printable CV. Well, I built it for myself when I had the need to create a beautiful, easy to edit from anywhere CV for myself; I then shared it because why not! It's not easy to know how many people have used it, but so far, its repo has been started 30 times and forked 16.",
+            content: "I built an open-source Hugo template for an online PDF printable CV. I built it for myself when I had the need to create a beautiful, easy to edit from anywhere CV; I then shared it because why not! It's not easy to know how many people have used it, but so far, its repo has been started 110 times and forked 61 times.",
         },
         {
             title: "Is neural activity detected by ERP-based brain-computer interfaces task specific?",
@@ -144,7 +145,7 @@ function Projects() {
             date: "2020",
             keyword: "Paper",
             link: "https://iopscience.iop.org/article/10.1088/1741-2552/ab7490/meta",
-            content: "For my Master's thesis, I researched using non-invasive brain signals to decode arm movement at the Institute of Neural Engineering in Graz (Austria). This paper was the result. I co-authored it with the PhD student that helped me with everything along the way.",
+            content: "For my Master's thesis, I researched and analysed brain data using non-invasive signals to decode arm movement at the Institute of Neural Engineering in Graz (Austria). This paper was the result. I co-authored it with the PhD student that helped me with everything along the way.",
         },
         {
             title: "Who you talk to",
@@ -154,7 +155,7 @@ function Projects() {
             style: {
                 backgroundColor: 'rgba(white, 0.5)',
             },
-            content: "I had a question in mind: who are the friends I talk to the most in my Facebook chat? When do we talk the most? What were the words that were most specific to each friend? To answer that, I created an offline python tool that did all that processing from the information downloaded from the website. The results were quite fun to explore!",
+            content: "I had a question in mind: who are the friends I talk to the most in my Facebook chat? When do we talk the most? What were the words that were most specific to each friend? To answer that (and to have an excuse to learn advanced python data analysis), I created an offline python tool that did all that processing from the information downloaded from the website. The results were quite fun to explore!",
         },
         {
             title: "Beers & Boomerangs - VR Video Game",
@@ -170,7 +171,7 @@ function Projects() {
             date: "2018",
             keyword: "Code",
             link: "http://facilities.igc.gulbenkian.pt/flowcytometry/cell_by_cell_web/index.html",
-            content: "While working at a research lab as a Flow Cytometry technician, I was given the challenge to create something to teach children and their parents about a science instrument - cell sorting. The result was a video game built in Unity where the player was sorting cells by their color. Unfortunately, I didn't have the time to polish it and add a tutorial to users. Before and while playing, we introduced some more scientific concepts.",
+            content: "While working at a research lab as a Flow Cytometry technician, I was given the challenge to create something to teach children and their parents about a science instrument - cell sorting. The result was a video game built in Unity (C#) where the player sorts cells by their color. Unfortunately, I didn't have the time to polish it and add a tutorial to users. Before and while playing, we introduced some more scientific concepts.",
         },
         {
             title: "Warm Sweater",
@@ -178,12 +179,12 @@ function Projects() {
             date: "2020",
             keyword: "Misc",
             link: null,
-            content: "I knitted a large warm sweater for my best-friend and partner. It took 55 hours and 700 meters of wool. I'm very proud of it :)",
+            content: "I knitted a large warm sweater for my best-friend and partner. It took 60 hours and 700 meters of wool. It was my first knitting project, and I'm very proud of it :)",
         },
         {
             title: "Personal website",
             slug: 'personal-website',
-            date: "2021",
+            date: "2020",
             keyword: "Code",
             link: null,
             content: "Small weekend project that has still a bunch of features to add. I like to take these chances to explore new tools and practice. I used sass, flexbox, CSS animations and React."
@@ -202,7 +203,7 @@ function Projects() {
             date: "2022",
             keyword: "Misc",
             link: null,
-            content: "I got into wood working a built a Learning Tower for my niece from scratch with the little tools I had available. She loves it!",
+            content: "I decided to try wood working, and for my first project I built a Learning Tower for my niece from scratch with the little tools I had available. It turned out pretty decent, and she loves it!",
         },
         {
             title: "President of a non-profit music organization",
@@ -218,7 +219,7 @@ function Projects() {
             date: "2022",
             keyword: "Code",
             link: "https://beersandboomerangs.com/",
-            content: "Fully designed and build a small website to showcase the game we built with nothing but pure HTML, CSS and Javascript.",
+            content: "Fully designed and build a small website to showcase the game we built with pure HTML, CSS and Javascript.",
         },
     ]
 
@@ -272,7 +273,7 @@ function Work() {
             'place': 'Oxford, UK',
             'from': "01-2020",
             'to': "03-2022",
-            'description': "I work mainly as a full-stack developer of a Django web portal with multiple integrated services. I also do some team management, communication with stakeholders, and create individual python packages and tools to be used by other teams.",
+            'description': "I worked as a full-stack developer of a Django web portal with multiple integrated services. I also managed our team of 3, communication with stakeholders, and created individual python packages and tools to be used by other teams.",
             'slug': 'persp-swe'
         },
         {
