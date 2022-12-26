@@ -93,10 +93,10 @@ function About() {
                         <img src = "climbing.png" alt = "Climbing" />
                     </div> 
                     <p>Hi! </p> 
-                    <p>I 'm a full-stack <b>Software Engineer</b> with a Master's in <b> Biomedical Engineering </b>. </p>
-                    <p>I like <b> bouldering </b>, <b>programming</b> , <b> cooking </b>, and <b>graphic design</b > among other things. </p> 
-                    <p>I 've lived in 6 different countries in Europe; I've published two neuroscience papers; I was president of a non - profit organization
-                        for 2 years while in university; and I built a commercial VR video game with my partner from scratch - just to name a few adventures I've had in the papst few years. </p>
+                    <p>I'm a full-stack <b>Software Engineer</b> with a Master's in <b> Biomedical Engineering </b>. </p>
+                    <p>I like <b> bouldering</b>, <b>programming</b>, <b> cooking</b>, and <b>graphic design</b > among other things. </p> 
+                    <p>I've lived in 6 different countries in Europe; I've published two neuroscience papers; I was president of a non - profit organization
+                        for 2 years while in university; and I built a commercial VR video game with my partner from scratch - just to name a few adventures I've had in the past few years.</p>
                     <p>Welcome to my personal website! </p>
                 </div>
             </div>
