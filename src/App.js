@@ -264,7 +264,7 @@ function Work() {
             'place': 'Lisbon, PT/SE',
             'from': "01-2021",
             'to': null,
-            'description': "I was the lead developer of a VR game called 'Beers and Boomerangs' which was released in November 2022. The game was developer in C# (Unity) and featured a lot of physics based systems.",
+            'description': "I was the lead developer of a VR game called 'Beers and Boomerangs' which was released in November 2022. The game was developed in C# (Unity) and featured a lot of physics based systems.",
             'slug': 'bnb-gdev'
         },
         {
