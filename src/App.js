@@ -259,10 +259,10 @@ function TimelineBar({ first_year, job_bars, bar_height, bar_start }) {
 function Work() {
 
     let jobs = [{
-            'title': 'VR Game Developer',
+            'title': 'VR Developer & Co-founder',
             'company': 'Witty Platypus',
             'place': 'Lisbon, PT/SE',
-            'from': "03-2022",
+            'from': "01-2021",
             'to': null,
             'description': "I was the lead developer of a VR game called 'Beers and Boomerangs' which was released in November 2022. The game was developer in C# (Unity) and featured a lot of physics based systems.",
             'slug': 'bnb-gdev'
