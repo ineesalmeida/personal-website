@@ -10,7 +10,6 @@
     "autoprefixer": "^10.2.1",
     "concat": "^1.0.3",
     "moment": "^2.29.4",
-    "node-sass": "^4.14.1",
     "npm-run-all": "^4.1.5",
     "postcss-cli": "^8.3.1",
     "react": "^17.0.2",
@@ -19,7 +18,7 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-scripts --openssl-legacy-provider start",
     "build": "react-scripts build",
     "build-cv": "( cd ../cv-almeida-example && hugo )",
     "build-with-cv": "npm-run-all build build-cv",
@@ -46,5 +45,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "sass": "^1.68.0"
   }
 }
