@@ -2,6 +2,10 @@ import './sass/main.scss';
 import moment from 'moment';
 import { useState } from "react";
 
+const CODE = "Code";
+const PAPER = "Paper";
+const MISC = "Misc";
+const tags = [CODE, PAPER, MISC]
 const tag_color = {
     Code: '#386FA4',
     Paper: '#DE7254',
@@ -45,6 +49,11 @@ function Header() {
             keywork: 'Github',
             icon: 'fab fa-github',
             link: 'https://github.com/ineesalmeida',
+        },
+        {
+            keywork: 'Launchpad',
+            icon: 'fa fa-rocket',
+            link: 'https://launchpad.net/~ines-almeida',
         },
         {
             keywork: 'Google Scholar',
@@ -95,7 +104,7 @@ function About() {
                     <p>Hi! </p> 
                     <p>I'm a full-stack <b>Software Engineer</b> with a Master's in <b> Biomedical Engineering </b>. </p>
                     <p>I like <b> bouldering</b>, <b>programming</b>, <b> cooking</b>, and <b>graphic design</b > among other things. </p> 
-                    <p>I've lived in 6 different countries in Europe; I've published two neuroscience papers; I was president of a non - profit organization
+                    <p>I've lived in 7 different countries in Europe; I've published two neuroscience papers; I was president of a non-profit organization
                         for 2 years while in university; and I built a commercial VR video game with my partner from scratch - just to name a few adventures I've had in the past few years.</p>
                     <p>Welcome to my personal website! </p>
                 </div>
@@ -123,11 +132,13 @@ function ProjectCard({ title, content, slug, link, keyword, date }) {
 }
 
 function Projects() {
-    let projects = [{
+
+    let projects = [
+        {
             title: "Hugo CV Template",
             slug: 'hugo',
             date: "2020",
-            keyword: "Code",
+            keyword: CODE,
             link: "https://github.com/ineesalmeida/almeida-cv",
             content: "I built an open-source Hugo template for an online PDF printable CV. I built it for myself when I had the need to create a beautiful, easy to edit from anywhere CV; I then shared it because why not! It's not easy to know how many people have used it, but so far, its repo has been started 110 times and forked 61 times.",
         },
@@ -135,7 +146,7 @@ function Projects() {
             title: "Is neural activity detected by ERP-based brain-computer interfaces task specific?",
             slug: 'paper2016',
             date: "2016",
-            keyword: "Paper",
+            keyword: PAPER,
             link: "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0165556",
             content: "I did a 2-month internship in Berlin at the Neurotechnology group of TU Berlin. This paper contains the results of that 2-month experiment.",
         },
@@ -143,7 +154,7 @@ function Projects() {
             title: "Using machine learning to reveal the population vector from EEG signals",
             slug: 'paper2020',
             date: "2020",
-            keyword: "Paper",
+            keyword: PAPER,
             link: "https://iopscience.iop.org/article/10.1088/1741-2552/ab7490/meta",
             content: "For my Master's thesis, I researched and analysed brain data using non-invasive signals to decode arm movement at the Institute of Neural Engineering in Graz (Austria). This paper was the result. I co-authored it with the PhD student that helped me with everything along the way.",
         },
@@ -151,7 +162,7 @@ function Projects() {
             title: "Who you talk to",
             slug: 'paper3',
             date: "2019",
-            keyword: "Code",
+            keyword: CODE,
             style: {
                 backgroundColor: 'rgba(white, 0.5)',
             },
@@ -161,7 +172,7 @@ function Projects() {
             title: "Beers & Boomerangs - VR Video Game",
             slug: 'vrgame',
             date: "On going",
-            keyword: "Code",
+            keyword: CODE,
             link: "https://beersandboomerangs.com/#play-the-game",
             content: "Me and my partner's latest project: to build a VR video game from scratch! We're using Unity (C#) and blender, and learning a bunch. What started a free time project, grew into a proper game that is now released on 5 platforms!",
         },
@@ -169,7 +180,7 @@ function Projects() {
             title: "Cell by Cell - Video Game",
             slug: 'flowgame',
             date: "2018",
-            keyword: "Code",
+            keyword: CODE,
             link: "http://facilities.igc.gulbenkian.pt/flowcytometry/cell_by_cell_web/index.html",
             content: "While working at a research lab as a Flow Cytometry technician, I was given the challenge to create something to teach children and their parents about a science instrument - cell sorting. The result was a video game built in Unity (C#) where the player sorts cells by their color. Unfortunately, I didn't have the time to polish it and add a tutorial to users. Before and while playing, we introduced some more scientific concepts.",
         },
@@ -177,7 +188,7 @@ function Projects() {
             title: "Warm Sweater",
             slug: 'sweater',
             date: "2020",
-            keyword: "Misc",
+            keyword: MISC,
             link: null,
             content: "I knitted a large warm sweater for my best-friend and partner. It took 60 hours and 700 meters of wool. It was my first knitting project, and I'm very proud of it :)",
         },
@@ -185,23 +196,23 @@ function Projects() {
             title: "Personal website",
             slug: 'personal-website',
             date: "2020",
-            keyword: "Code",
-            link: null,
+            keyword: CODE,
+            link: "https://github.com/ineesalmeida/personal-website",
             content: "Small weekend project that has still a bunch of features to add. I like to take these chances to explore new tools and practice. I used sass, flexbox, CSS animations and React."
         },
         {
             title: "Virtual Library",
             slug: 'flask-lib',
             date: "2019",
-            keyword: "Code",
+            keyword: CODE,
             link: null,
             content: "My mum was getting lost in all her thousands of books, and wanted to go through each and note down where it was. For her birthday, I created a DB with a nice front-end made in Flask and Material where she could, add, edit, query or remove book registries, and import and export them as CSVs to open in Excel.",
         },
         {
-            title: "Woord working - Learning Tower",
+            title: "Wood working - Learning Tower",
             slug: 'ww-learntower',
             date: "2022",
-            keyword: "Misc",
+            keyword: MISC,
             link: null,
             content: "I decided to try wood working, and for my first project I built a Learning Tower for my niece from scratch with the little tools I had available. It turned out pretty decent, and she loves it!",
         },
@@ -209,7 +220,7 @@ function Projects() {
             title: "President of a non-profit music organization",
             slug: 'vicentuna',
             date: "2015",
-            keyword: "Misc",
+            keyword: MISC,
             link: "https://soundcloud.com/user-749301859",
             content: "For 2 years during my University degree, I was president of a tradicional music group of 40 members that had several actvities throughout the year, including travel around Portugal and playing in music festivals.",
         },
@@ -217,7 +228,7 @@ function Projects() {
             title: "Beers & Boomerangs website",
             slug: 'web-design-bnb',
             date: "2022",
-            keyword: "Code",
+            keyword: CODE,
             link: "https://beersandboomerangs.com/",
             content: "Fully designed and build a small website to showcase the game we built with pure HTML, CSS and Javascript.",
         },
@@ -258,7 +269,17 @@ function TimelineBar({ first_year, job_bars, bar_height, bar_start }) {
 
 function Work() {
 
-    let jobs = [{
+    let jobs = [
+        {
+            'title': 'Software Engineer',
+            'company': 'Canonical',
+            'place': 'Zurich, CH',
+            'from': "03-2023",
+            'to': null,
+            'description': "I am currently part of a great team of software engineers that build and maintain Launchpad - a web application that allows users to develop and maintain software, particularly open-source software.",
+            'slug': 'lp-swe'
+        },
+        {
             'title': 'VR Developer & Co-founder',
             'company': 'Witty Platypus',
             'place': 'Lisbon, PT/SE',
@@ -311,6 +332,15 @@ function Work() {
             'to': "09-2015",
             'description': "At the end of my Bachelor's degree, I did this small neuroscience internship. I designed and conducted an experiment (with a lot of help from a PhD student). In the end, I wrote my Bachelor's thesis and a paper with the contents",
             'slug': 'bachelor-intern'
+        },
+        {
+            'title': "Biomedical Engineering Master Student",
+            'company': 'Faculty of Sciences, University of Lisbon',
+            'place': 'Lisbon, PT',
+            'from': "09-2015",
+            'to': "11-2017",
+            'description': "I did a Master's in Biomedical Engineering and Biophysics, with a focus on data and image processing.",
+            'slug': 'master-student'
         }
     ];
 
