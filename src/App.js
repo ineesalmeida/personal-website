@@ -131,6 +131,21 @@ function ProjectCard({ title, content, slug, link, keyword, date }) {
     )
 }
 
+function ProjectCardFilter() {
+    let searchButtons = tags.map((tag) => {
+        return (
+            <div className = "projects__card__label" style={{ backgroundColor: tag_color[tag] }}>
+                { tag }
+            </div>
+        )
+    });
+    return (
+        <div className="project_filters">
+            { searchButtons }
+        </div>
+    );
+}
+
 function Projects() {
 
     let projects = [
@@ -240,6 +255,7 @@ function Projects() {
         <div className = 'container' id = 'projects' >
             <div className = 'container__content' >
                 <h1> Some of my Projects </h1> 
+                {/* <ProjectCardFilter /> */}
                 <div className = 'projects' >
                     <div className = 'projects__cards_container' > 
                         { project_cards }
