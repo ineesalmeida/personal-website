@@ -184,6 +184,14 @@ function Projects() {
             content: "I had a question in mind: who are the friends I talk to the most in my Facebook chat? When do we talk the most? What were the words that were most specific to each friend? To answer that (and to have an excuse to learn advanced python data analysis), I created an offline python tool that did all that processing from the information downloaded from the website. The results were quite fun to explore!",
         },
         {
+            title: "THREE.js - Sandbox",
+            slug: 'three-js',
+            date: "2024",
+            keyword: CODE,
+            link: "/three_sandbox",
+            content: "Played around with new 3D interactions with THREE.js.",
+        },
+        {
             title: "Beers & Boomerangs - VR Video Game",
             slug: 'vrgame',
             date: "On going",
@@ -215,14 +223,14 @@ function Projects() {
             link: "https://github.com/ineesalmeida/personal-website",
             content: "Small weekend project that has still a bunch of features to add. I like to take these chances to explore new tools and practice. I used sass, flexbox, CSS animations and React."
         },
-        {
-            title: "Virtual Library",
-            slug: 'flask-lib',
-            date: "2019",
-            keyword: CODE,
-            link: null,
-            content: "My mum was getting lost in all her thousands of books, and wanted to go through each and note down where it was. For her birthday, I created a DB with a nice front-end made in Flask and Material where she could, add, edit, query or remove book registries, and import and export them as CSVs to open in Excel.",
-        },
+        // {
+        //     title: "Virtual Library",
+        //     slug: 'flask-lib',
+        //     date: "2019",
+        //     keyword: CODE,
+        //     link: null,
+        //     content: "My mum was getting lost in all her thousands of books, and wanted to go through each and note down where it was. For her birthday, I created a DB with a nice front-end made in Flask and Material where she could, add, edit, query or remove book registries, and import and export them as CSVs to open in Excel.",
+        // },
         {
             title: "Wood working - Learning Tower",
             slug: 'ww-learntower',
@@ -260,7 +268,7 @@ function Projects() {
                     <div className = 'projects__cards_container' > 
                         { project_cards }
                     </div> 
-                </div > 
+                </div> 
             </div> 
         </div>
     )
@@ -341,15 +349,6 @@ function Work() {
             'slug': 'master-intern'
         },
         {
-            'title': "Bachelor's Thesis Research Intern",
-            'company': 'Institute of Neural Engineering',
-            'place': 'Berlin, DE',
-            'from': "06-2015",
-            'to': "09-2015",
-            'description': "At the end of my Bachelor's degree, I did this small neuroscience internship. I designed and conducted an experiment (with a lot of help from a PhD student). In the end, I wrote my Bachelor's thesis and a paper with the contents",
-            'slug': 'bachelor-intern'
-        },
-        {
             'title': "Biomedical Engineering Master Student",
             'company': 'Faculty of Sciences, University of Lisbon',
             'place': 'Lisbon, PT',
@@ -357,6 +356,15 @@ function Work() {
             'to': "11-2017",
             'description': "I did a Master's in Biomedical Engineering and Biophysics, with a focus on data and image processing.",
             'slug': 'master-student'
+        },
+        {
+            'title': "Bachelor's Thesis Research Intern",
+            'company': 'Institute of Neural Engineering',
+            'place': 'Berlin, DE',
+            'from': "06-2015",
+            'to': "09-2015",
+            'description': "At the end of my Bachelor's degree, I did this small neuroscience internship. I designed and conducted an experiment (with a lot of help from a PhD student). In the end, I wrote my Bachelor's thesis and a paper with the contents",
+            'slug': 'bachelor-intern'
         }
     ];
 
