@@ -57,14 +57,14 @@
 
 <script type="importmap">
     { "imports": {
-        "three": "https://unpkg.com/three@0.138.3/build/three.module.js"
+        "three": "./three/build/three.module.js"
     } }
-  </script>
+</script>
 
 <script type="module">
 import * as THREE from "three";
-import { TextGeometry } from 'https://unpkg.com/three@0.138.3/examples/jsm/geometries/TextGeometry.js';
-import { FontLoader } from 'https://unpkg.com/three@0.138.3/examples/jsm/loaders/FontLoader.js';
+import { TextGeometry } from './three/examples/jsm/geometries/TextGeometry.js';
+import { FontLoader } from './three/examples/jsm/loaders/FontLoader.js';
     
 // Create scene and camera
 const scene = new THREE.Scene();
@@ -137,7 +137,6 @@ function render() {
 }
 
 animate()
-
 
 function addText(_text, _material, _scene, _size=1, _position=[0, 0, 0], _rotation=[0, 0, 0]) {
     const loader = new FontLoader();
