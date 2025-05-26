@@ -4,6 +4,10 @@
     &__cards_container {
         display: flex;
         flex-wrap: wrap;
+
+        &:hover .projects__card:not(:hover) {
+            background-color: rgba(white, 0.08);
+        }
     }
     &__card {
         position: relative;

@@ -20,7 +20,7 @@
   "scripts": {
     "start": "react-scripts --openssl-legacy-provider start",
     "build": "react-scripts --openssl-legacy-provider build",
-    "build-cv": "( cd ../cv-almeida-example && hugo )",
+    "build-cv": "( cd ../cv-almeida && hugo )",
     "build-with-cv": "npm-run-all build build-cv",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

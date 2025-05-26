@@ -35,11 +35,12 @@ function SocialMedia({ keywork, icon, link }) {
 
 function Header() {
 
-    let social_media = [{
-            keywork: 'Email',
-            icon: 'fas fa-envelope-square',
-            link: 'mailto:contact@ines-almeida.com',
-        },
+    let social_media = [
+        // {
+        //     keywork: 'Email',
+        //     icon: 'fas fa-envelope-square',
+        //     link: 'mailto:contact@ines-almeida.com',
+        // },
         {
             keywork: 'LinkedIn',
             icon: 'fab fa-linkedin',
@@ -83,9 +84,11 @@ function Header() {
                         <h2 > Software Engineer </h2><h2> | </h2> 
                         <h2> Biomedical Engineer MSc </h2> 
                         <br/>
-                        <div className = "network tooltip" > { social_media.map(s => < SocialMedia key = { s.keywork } {...s } />)} 
+                        <div className = "network tooltip" >
+                            <SocialMedia key = "Email" icon="fas fa-envelope-square" link="mailto:contact@ines-almeida.com"/>
                             <span className = "tooltiptext" > Email: contact@ines-almeida.com </span>
-                        </div > 
+                        </div> 
+                        { social_media.map(s => <SocialMedia key = { s.keywork } {...s } />)} 
                     </div> 
                 </div> 
             </div> 
@@ -176,7 +179,7 @@ function Projects() {
         {
             title: "Who you talk to",
             slug: 'paper3',
-            date: "2019",
+            date: "2018",
             keyword: CODE,
             style: {
                 backgroundColor: 'rgba(white, 0.5)',
